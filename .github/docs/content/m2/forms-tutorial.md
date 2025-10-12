@@ -1,0 +1,434 @@
+# HTML Forms - Aula Completa
+
+> [Voltar](../../../../README.md) a página anterior(README.md)
+
+## Índice
+
+- [HTML Forms - Aula Completa](#html-forms---aula-completa)
+  - [Índice](#índice)
+  - [O Começo: Formulário Simples](#o-começo-formulário-simples)
+  - [Entendendo o Atributo `method`](#entendendo-o-atributo-method)
+  - [Tipos de Input - O Coração dos Formulários](#tipos-de-input---o-coração-dos-formulários)
+  - [Outros Elementos de Formulário](#outros-elementos-de-formulário)
+  - [Atributos Importantes](#atributos-importantes)
+  - [Validação HTML5](#validação-html5)
+  - [Formulário Intermediário Prático](#formulário-intermediário-prático)
+  - [Recursos Avançados](#recursos-avançados)
+  - [Complexidade: Formulário com Múltiplos Campos Dinâmicos](#complexidade-formulário-com-múltiplos-campos-dinâmicos)
+  - [Conceitos Avançados](#conceitos-avançados)
+  - [Resumo das Melhores Práticas](#resumo-das-melhores-práticas)
+
+## O Começo: Formulário Simples
+
+Um formulário HTML começa com a tag `<form>`. A forma mais básica captura dados do usuário:
+
+```html
+<form action="/enviar" method="POST">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome">
+  
+  <button type="submit">Enviar</button>
+</form>
+```
+
+Aqui temos:
+
+- `action`: para onde os dados vão (URL do servidor)
+- `method`: como enviar (POST ou GET)
+- `<label>`: descreve o campo (importante para acessibilidade)
+- `<input>`: campo de entrada
+- `type="submit"`: botão que envia o formulário
+
+## Entendendo o Atributo `method`
+
+**GET**: os dados aparecem na URL (visível, inseguro para dados sensíveis, máximo ~2000 caracteres)
+
+```html
+<form action="/buscar" method="GET">
+  <input type="text" name="q">
+  <button type="submit">Buscar</button>
+</form>
+```
+
+**POST**: dados vão no corpo da requisição (seguro, sem limite de tamanho)
+
+```html
+<form action="/login" method="POST">
+  <input type="password" name="senha">
+  <button type="submit">Entrar</button>
+</form>
+```
+
+## Tipos de Input - O Coração dos Formulários
+
+HTML5 oferece diversos tipos de input, cada um com validação e interface específicas:
+
+```html
+<form>
+  <!-- Texto simples -->
+  <input type="text" placeholder="Digite aqui">
+  
+  <!-- Email (valida formato) -->
+  <input type="email" placeholder="seu@email.com">
+  
+  <!-- Número (botões + e -) -->
+  <input type="number" min="0" max="100">
+  
+  <!-- Senha (oculta caracteres) -->
+  <input type="password">
+  
+  <!-- Data -->
+  <input type="date">
+  
+  <!-- Hora -->
+  <input type="time">
+  
+  <!-- Data e hora -->
+  <input type="datetime-local">
+  
+  <!-- Cor -->
+  <input type="color">
+  
+  <!-- Arquivo -->
+  <input type="file">
+  
+  <!-- Telefone -->
+  <input type="tel" placeholder="(11) 99999-9999">
+  
+  <!-- URL -->
+  <input type="url" placeholder="https://exemplo.com">
+  
+  <!-- Checkbox (múltiplas escolhas) -->
+  <input type="checkbox" id="aceito"> 
+  <label for="aceito">Aceito os termos</label>
+  
+  <!-- Radio (uma escolha) -->
+  <input type="radio" name="genero" value="m"> Masculino
+  <input type="radio" name="genero" value="f"> Feminino
+  
+  <!-- Intervalo -->
+  <input type="range" min="0" max="100">
+  
+  <!-- Busca -->
+  <input type="search">
+</form>
+```
+
+## Outros Elementos de Formulário
+
+**Textarea** para textos longos:
+
+```html
+<textarea name="mensagem" rows="5" cols="40" placeholder="Escreva aqui..."></textarea>
+```
+
+**Select** para lista suspensa:
+
+```html
+<select name="pais">
+  <option value="">Selecione um país</option>
+  <option value="br">Brasil</option>
+  <option value="mx">México</option>
+  <option value="ar">Argentina</option>
+</select>
+```
+
+**Datalist** para sugestões enquanto digita:
+
+```html
+<input type="text" list="tecnologias">
+<datalist id="tecnologias">
+  <option value="JavaScript">
+  <option value="Python">
+  <option value="Java">
+</datalist>
+```
+
+**Fieldset** para agrupar relacionados:
+
+```html
+<fieldset>
+  <legend>Dados Pessoais</legend>
+  <input type="text" placeholder="Nome">
+  <input type="email" placeholder="Email">
+</fieldset>
+```
+
+## Atributos Importantes
+
+```html
+<form>
+  <!-- required: obrigatório -->
+  <input type="text" required>
+  
+  <!-- placeholder: dica visual -->
+  <input type="text" placeholder="Digite aqui">
+  
+  <!-- value: valor padrão -->
+  <input type="text" value="Padrão">
+  
+  <!-- disabled: desabilitado -->
+  <input type="text" disabled>
+  
+  <!-- readonly: apenas leitura -->
+  <input type="text" readonly value="Não pode editar">
+  
+  <!-- name: identificador (IMPORTANTE para envio) -->
+  <input type="text" name="usuario">
+  
+  <!-- id: identificador único (para label) -->
+  <input type="text" id="email">
+  <label for="email">Email:</label>
+  
+  <!-- pattern: validação com regex -->
+  <input type="text" pattern="[A-Z]{3}" placeholder="Três letras maiúsculas">
+  
+  <!-- maxlength/minlength: comprimento -->
+  <input type="text" minlength="5" maxlength="20">
+  
+  <!-- min/max: para números e datas -->
+  <input type="number" min="18" max="100">
+  
+  <!-- step: incremento para range/number -->
+  <input type="number" step="0.5">
+  
+  <!-- autocomplete: sugestões do navegador -->
+  <input type="text" autocomplete="off">
+</form>
+```
+
+## Validação HTML5
+
+O navegador valida automaticamente:
+
+```html
+<form>
+  <!-- Email válido obrigatório -->
+  <input type="email" required>
+  
+  <!-- Número entre 1 e 10 -->
+  <input type="number" min="1" max="10" required>
+  
+  <!-- Deve fazer match com regex -->
+  <input type="text" pattern="[0-9]{3}-[0-9]{4}" 
+         title="Formato: 123-4567">
+  
+  <!-- Arquivo apenas imagens -->
+  <input type="file" accept="image/*">
+  
+  <!-- Arquivo específico -->
+  <input type="file" accept=".pdf,.doc,.docx">
+  
+  <button type="submit">Enviar</button>
+</form>
+```
+
+## Formulário Intermediário Prático
+
+```html
+<form action="/cadastro" method="POST">
+  <fieldset>
+    <legend>Cadastro de Usuário</legend>
+    
+    <div>
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required minlength="3">
+    </div>
+    
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div>
+      <label for="nascimento">Data de Nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento" required>
+    </div>
+    
+    <div>
+      <label for="pais">País:</label>
+      <select id="pais" name="pais" required>
+        <option value="">Selecione</option>
+        <option value="br">Brasil</option>
+        <option value="pt">Portugal</option>
+        <option value="ao">Angola</option>
+      </select>
+    </div>
+    
+    <div>
+      <label>Gênero:</label>
+      <input type="radio" name="genero" value="m" required> Masculino
+      <input type="radio" name="genero" value="f"> Feminino
+      <input type="radio" name="genero" value="o"> Outro
+    </div>
+    
+    <div>
+      <input type="checkbox" id="newsletter" name="newsletter">
+      <label for="newsletter">Receber newsletter</label>
+    </div>
+    
+    <div>
+      <button type="submit">Cadastrar</button>
+      <button type="reset">Limpar</button>
+    </div>
+  </fieldset>
+</form>
+```
+
+## Recursos Avançados
+
+**Output** (exibir resultado de cálculo):
+
+```html
+<form oninput="resultado.value = parseInt(a.value) + parseInt(b.value)">
+  <input type="number" id="a" value="10">
+  +
+  <input type="number" id="b" value="20">
+  =
+  <output name="resultado">30</output>
+</form>
+```
+
+**Meter** (medidor visual):
+
+```html
+<label for="volume">Volume:</label>
+<meter id="volume" value="6" min="0" max="10"></meter>
+```
+
+**Progress** (barra de progresso):
+
+```html
+<label for="upload">Download:</label>
+<progress id="upload" value="70" max="100"></progress>
+```
+
+**Múltiplos ficheiros**:
+
+```html
+<input type="file" multiple accept="image/*">
+```
+
+**Input com list autocomplete:
+
+```html
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Safari">
+</datalist>
+<input type="text" list="browsers" placeholder="Navegador">
+```
+
+## Complexidade: Formulário com Múltiplos Campos Dinâmicos
+
+```html
+<form action="/pedido" method="POST">
+  <fieldset>
+    <legend>Fazer Pedido</legend>
+    
+    <div>
+      <label for="cliente">Cliente:</label>
+      <input type="text" id="cliente" name="cliente" required>
+    </div>
+    
+    <fieldset>
+      <legend>Itens do Pedido</legend>
+      <div id="itens">
+        <div class="item">
+          <label>Produto:</label>
+          <input type="text" name="produto[]" required>
+          
+          <label>Quantidade:</label>
+          <input type="number" name="quantidade[]" min="1" required>
+          
+          <label>Preço:</label>
+          <input type="number" name="preco[]" step="0.01" required>
+        </div>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Endereço de Entrega</legend>
+      
+      <label>Rua:</label>
+      <input type="text" name="rua" required>
+      
+      <label>Número:</label>
+      <input type="number" name="numero" required>
+      
+      <label>CEP:</label>
+      <input type="text" name="cep" pattern="[0-9]{5}-[0-9]{3}" required>
+      
+      <label>Cidade:</label>
+      <input type="text" name="cidade" required>
+      
+      <label>Estado:</label>
+      <input type="text" name="estado" maxlength="2" required>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Método de Pagamento</legend>
+      <input type="radio" name="pagamento" value="credito" required> Crédito
+      <input type="radio" name="pagamento" value="debito"> Débito
+      <input type="radio" name="pagamento" value="pix"> PIX
+    </fieldset>
+    
+    <div>
+      <label for="observacoes">Observações:</label>
+      <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+    </div>
+    
+    <button type="submit">Fazer Pedido</button>
+  </fieldset>
+</form>
+```
+
+## Conceitos Avançados
+
+**Envio de arquivo com formulário:**
+
+```html
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="arquivo" accept=".pdf,.zip" required>
+  <button type="submit">Enviar</button>
+</form>
+```
+
+O `enctype="multipart/form-data"` é essencial para enviar arquivos!
+
+**Desabilitar campo automaticamente:**
+
+```html
+<form>
+  <input type="checkbox" id="enviado" name="enviado">
+  <label for="enviado">Já enviado?</label>
+  
+  <div id="nao-enviado">
+    <input type="text" name="codigo" placeholder="Código de rastreamento">
+  </div>
+</form>
+```
+
+**Validação customizada com `novalidate`:**
+
+```html
+<form novalidate>
+  <!-- Aqui você controla a validação manualmente com JavaScript -->
+  <input type="email" id="email">
+  <span id="erro-email"></span>
+</form>
+```
+
+## Resumo das Melhores Práticas
+
+1. Sempre use `<label>` (acessibilidade e melhor UX)
+2. Use `name` em todos os campos (é como os dados serão identificados)
+3. Aproveite a validação HTML5 (não reinvente a roda)
+4. Agrupe campos com `<fieldset>` e `<legend>`
+5. Use o `type` correto do `<input>` (melhor UX no mobile)
+6. Sempre tenha um botão de submit com `type="submit"`
+7. Use `enctype="multipart/form-data"` para arquivos
+8. Mantenha o formulário legível e organizado
+
+Formulários HTML puros são poderosos e, com HTML5, cobrem a maioria dos casos sem precisar de JavaScript. Eles também funcionam com qualquer backend (PHP, Node.js, Python, etc.).

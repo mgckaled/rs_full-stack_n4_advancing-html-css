@@ -1,3 +1,10 @@
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
+
+<p align="center">
+  <img alt="Logo - Rocketseat" src="./.github/assets/images/logo_rocketseat.png" width="200px" />
+</p>
+
 # Avançando no HTML e CSS (Nível 4)
 
 ## Índice
@@ -6,6 +13,11 @@
   - [Índice](#índice)
   - [Sobre](#sobre)
   - [Módulo 1 - Layout com CSS](#módulo-1---layout-com-css)
+    - [Bloco 1 - Layouts e Evolução em CSS](#bloco-1---layouts-e-evolução-em-css)
+    - [Bloco 2 - CSS Flexbox](#bloco-2---css-flexbox)
+    - [Bloco 3 - Projeto: Travelgran](#bloco-3---projeto-travelgran)
+    - [Bloco 4 - CSS Grid](#bloco-4---css-grid)
+    - [Bloco 5 - Portal de Notícias](#bloco-5---portal-de-notícias)
   - [Módulo 2 - Formulários](#módulo-2---formulários)
   - [Módulo 3 - CSS Functions](#módulo-3---css-functions)
   - [Módulo 4 - Responsividade](#módulo-4---responsividade)
@@ -25,8 +37,34 @@ Repositório pessoal de registro, referência e suporte para fins de aprendizado
 
 Neste módulo, vamos criar layouts avançados para páginas web usando Flexbox e Grid, além de explorar técnicas de posicionamento, variáveis e pseudo-elementos.
 
-- [Anotações]
-- [Arquivos]
+### Bloco 1 - Layouts e Evolução em CSS
+
+**Tópicos**: Position, Variáveis CSS (Custom Properties), Pseudo-classes e Pseudo-elementos
+
+- [Guia de Referência](./.github/docs/content/m1/b1.md)
+- [Projeto Aplicado - Portfólio](./m1/b1/)
+
+### Bloco 2 - CSS Flexbox
+
+**Tópicos:** Containers, Justify-Content, Align-Items, Gap e Margin, Multi Line, Flex Basis, Flex Grow e Flex Shrink, Shorhand Flex, Order, Flex-Flow, Align-Items, Row e Column-Gap
+
+- [Guia de Referência](./.github/docs/content/m1/b2.md)
+- [Projeto Aplicado - Dashboard](./m1/b2/)
+
+### Bloco 3 - Projeto: Travelgran
+
+Neste projeto do Perfil de Viagens, exploramos conceitos como Display Flex e variáveis CSS. Utilizamos o Figma para a navegação do projeto e o Style Guide.
+
+- [Arquivos do projeto](./m1/b3/)
+- [Layout (Figma)](https://www.figma.com/community/file/1360315496868719817)
+
+### Bloco 4 - CSS Grid
+
+**Tópicos:**
+
+### Bloco 5 - Portal de Notícias
+
+**Tópicos:**
 
 ---
 
@@ -34,8 +72,9 @@ Neste módulo, vamos criar layouts avançados para páginas web usando Flexbox e
 
 Neste módulo, você aprenderá a criar formulários com elementos como input text, select, textarea, além de aprender como utilizar botões, checkboxes e outros recursos.
 
-- [Anotações]
+- [Tutorial Completo](./.github/docs/content/m2/forms-tutorial.md)
 - [Arquivos]
+- [Projeto] - Formulário de Matrícula
 
 ---
 

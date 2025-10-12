@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Forms - Exemplos Profissionais</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <h1>📋 HTML5 Forms - Exemplos Profissionais Avançados</h1>
+        <p class="subtitle">Demonstração completa de recursos nativos do HTML5 para formulários em produção</p>
+
+        <!-- EXEMPLO 1: FORMULÁRIO DE CADASTRO COM VALIDAÇÃO -->
+        <h2>1. Cadastro de Usuário com Validação HTML5</h2>
+        <form id="cadastroForm">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="nome" required>Nome Completo</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                minlength="3"
+                maxlength="100"
+                placeholder="João Silva Santos"
+                pattern="[A-Za-zÀ-ÿ\s]+"
+              />
+              <div class="field-hint">Mínimo 3 caracteres, máximo 100</div>
+              <div class="error-message">Nome deve conter apenas letras</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" required>Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="usuario@empresa.com"
+              />
+              <div class="field-hint">Será usado para recuperação de senha</div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="telefone" required>Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                pattern="[\+]?[0-9\s\-\(\)]+"
+                placeholder="(11) 99999-9999"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cpf" required>CPF</label>
+              <input
+                type="text"
+                id="cpf"
+                name="cpf"
+                required
+                pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                placeholder="123.456.789-00"
+              />
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="nascimento" required>Data de Nascimento</label>
+              <input
+                type="date"
+                id="nascimento"
+                name="nascimento"
+                required
+                max="2010-01-01"
+                title="Você deve ter pelo menos 18 anos"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cep" required>CEP</label>
+              <input type="text" id="cep" name="cep" required pattern="[0-9]{5}-[0-9]{3}" placeholder="01310-100" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="senha" required>Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              required
+              minlength="8"
+              autocomplete="new-password"
+              placeholder="Mínimo 8 caracteres"
+            />
+            <div class="field-hint">Use letras maiúsculas, minúsculas, números e símbolos</div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmaSenha" required>Confirmar Senha</label>
+            <input type="password" id="confirmaSenha" name="confirmaSenha" required autocomplete="new-password" />
+          </div>
+
+          <div class="button-group">
+            <input type="submit" value="Criar Conta" />
+            <input type="reset" value="Limpar Formulário" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 2: FORMULÁRIO DE BUSCA E FILTROS -->
+        <h2>2. Busca Avançada com Datalist e Filtros</h2>
+        <form id="buscaForm">
+          <div class="form-group">
+            <label for="busca">Buscar Produto</label>
+            <input type="search" id="busca" name="busca" list="produtos" placeholder="Digite nome do produto..." />
+            <datalist id="produtos">
+              <option value="Notebook Dell XPS 13"></option>
+              <option value="Monitor LG 27 polegadas"></option>
+              <option value="Teclado Mecânico RGB"></option>
+              <option value="Mouse Logitech MX Master"></option>
+              <option value="Webcam HD 1080p"></option>
+              <option value="Headset Gamer Corsair"></option>
+            </datalist>
+          </div>
+
+          <fieldset>
+            <legend>Filtros</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria">
+                  <option value="">Todas as categorias</option>
+                  <optgroup label="Computadores">
+                    <option value="notebooks">Notebooks</option>
+                    <option value="desktops">Desktops</option>
+                    <option value="tablets">Tablets</option>
+                  </optgroup>
+                  <optgroup label="Periféricos">
+                    <option value="mouse">Mouse</option>
+                    <option value="teclado">Teclado</option>
+                    <option value="monitor">Monitor</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="preco">Preço Máximo</label>
+                <input type="number" id="preco" name="preco" min="0" max="10000" step="100" value="5000" />
+              </div>
+
+              <div class="form-group">
+                <label for="estoque">Em Estoque</label>
+                <select id="estoque" name="estoque">
+                  <option value="">Qualquer estado</option>
+                  <option value="sim">Apenas em estoque</option>
+                  <option value="nao">Indisponível</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="promo" name="promo" value="true" />
+                <label for="promo">Apenas promoções</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="frete" name="frete" value="true" />
+                <label for="frete">Frete grátis</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="novo" name="novo" value="true" />
+                <label for="novo">Produtos novos</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="🔍 Buscar" />
+            <input type="reset" value="Limpar Filtros" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 3: FORMULÁRIO DE PAGAMENTO -->
+        <h2>3. Formulário de Pagamento com Múltiplos Campos</h2>
+        <form id="pagamentoForm">
+          <fieldset>
+            <legend>Dados do Cartão</legend>
+
+            <div class="form-group">
+              <label for="titular" required>Titular do Cartão</label>
+              <input
+                type="text"
+                id="titular"
+                name="titular"
+                required
+                pattern="[A-Za-zÀ-ÿ\s]+"
+                placeholder="JOÃO SILVA"
+              />
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="numero" required>Número do Cartão</label>
+                <input
+                  type="text"
+                  id="numero"
+                  name="numero"
+                  required
+                  pattern="[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}"
+                  placeholder="1234 5678 9012 3456"
+                  autocomplete="cc-number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="validade" required>Validade (MM/AA)</label>
+                <input
+                  type="text"
+                  id="validade"
+                  name="validade"
+                  required
+                  pattern="(0[1-9]|1[0-2])/[0-9]{2}"
+                  placeholder="12/25"
+                />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="cvv" required>CVV</label>
+                <input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  required
+                  pattern="[0-9]{3,4}"
+                  placeholder="123"
+                  autocomplete="cc-csc"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="cpfCartao">CPF (Titular)</label>
+                <input
+                  type="text"
+                  id="cpfCartao"
+                  name="cpfCartao"
+                  pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                  placeholder="123.456.789-00"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço de Cobrança</legend>
+
+            <div class="form-group">
+              <label for="endereco" required>Endereço</label>
+              <input type="text" id="endereco" name="endereco" required autocomplete="street-address" />
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="cidade" required>Cidade</label>
+                <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" />
+              </div>
+
+              <div class="form-group">
+                <label for="estado" required>Estado</label>
+                <input type="text" id="estado" name="estado" required maxlength="2" autocomplete="address-level1" />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <input type="checkbox" id="saveCard" name="saveCard" />
+            <label for="saveCard">Salvar cartão para próximas compras</label>
+          </div>
+
+          <div class="button-group">
+            <input type="submit" value="✓ Processar Pagamento" />
+            <input type="reset" value="Cancelar" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 4: FORMULÁRIO COM CONTROLES DE ENTRADA AVANÇADOS -->
+        <h2>4. Controles Avançados: Range, Color, DateTime</h2>
+        <form id="controlesForm">
+          <fieldset>
+            <legend>Preferências e Configurações</legend>
+
+            <div class="form-group">
+              <label for="volume">Volume de Notificações</label>
+              <input type="range" id="volume" name="volume" min="0" max="100" step="5" value="70" />
+              <div class="range-display">
+                <span>0%</span>
+                <span class="range-value"><output for="volume">70</output>%</span>
+                <span>100%</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="brilho">Brilho da Tela</label>
+              <input type="range" id="brilho" name="brilho" min="20" max="100" step="10" value="80" />
+              <div class="range-display">
+                <span>Baixo</span>
+                <span class="range-value"><output for="brilho">80</output></span>
+                <span>Alto</span>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="cor">Cor do Tema</label>
+                <input type="color" id="cor" name="cor" value="#667eea" />
+              </div>
+
+              <div class="form-group">
+                <label for="agendamento">Agendar Para</label>
+                <input type="datetime-local" id="agendamento" name="agendamento" />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="inicio">Data de Início</label>
+                <input type="date" id="inicio" name="inicio" />
+              </div>
+
+              <div class="form-group">
+                <label for="termino">Data de Término</label>
+                <input type="date" id="termino" name="termino" />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="horario">Horário Preferido</label>
+                <input type="time" id="horario" name="horario" />
+              </div>
+
+              <div class="form-group">
+                <label for="mes">Mês</label>
+                <input type="month" id="mes" name="mes" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="semana">Semana</label>
+              <input type="week" id="semana" name="semana" />
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="Salvar Preferências" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 5: FORMULÁRIO COM CALCULADORA INTEGRADA -->
+        <h2>5. Formulário com Output e Cálculos Dinâmicos</h2>
+        <form id="calculadora" oninput="calcularFrete()">
+          <fieldset>
+            <legend>Cotação de Frete</legend>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" name="peso" min="0" step="0.1" value="5" required />
+              </div>
+
+              <div class="form-group">
+                <label for="distancia">Distância (km)</label>
+                <input type="number" id="distancia" name="distancia" min="0" step="1" value="50" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Valor da Base (R$ 10,00)</label>
+              <output name="base">10,00</output>
+            </div>
+
+            <div class="form-group">
+              <label>Peso (R$): <output for="peso" name="custoPeso">0,00</output></label>
+            </div>
+
+            <div class="form-group">
+              <label>Distância (R$): <output for="distancia" name="custoDistancia">0,00</output></label>
+            </div>
+
+            <div class="form-group">
+              <label style="font-weight: 700; font-size: 16px">
+                Total do Frete:
+                <output name="total" form="calculadora">15,00</output>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Avaliação de Qualidade</legend>
+
+            <div class="form-group">
+              <label for="qualidade">Qualidade do Serviço</label>
+              <input type="range" id="qualidade" name="qualidade" min="1" max="5" step="1" value="3" />
+              <output for="qualidade">3/5 estrelas</output>
+            </div>
+
+            <div class="form-group">
+              <label for="satisfacao">Nível de Satisfação</label>
+              <meter id="satisfacao" name="satisfacao" value="3" min="0" max="5" low="2" high="4" optimum="5"></meter>
+              <span class="help-text">Baixo (0-2) | Médio (2-4) | Alto (4-5)</span>
+            </div>
+
+            <div class="form-group">
+              <label for="progresso">Conclusão do Pedido</label>
+              <progress id="progresso" name="progresso" value="65" max="100"></progress>
+              <span class="help-text">65% concluído</span>
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="Calcular Frete" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 6: FORMULÁRIO COM UPLOAD E MULTIPLOS ARQUIVOS -->
+        <h2>6. Upload de Arquivos com Validação</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Enviar Documentos</legend>
+
+            <div class="form-group">
+              <label for="documento" required>Documento (PDF, DOC)</label>
+              <input type="file" id="documento" name="documento" required accept=".pdf,.doc,.docx" />
+              <div class="help-text">Formatos aceitos: PDF, DOC, DOCX. Máximo 10MB</div>
+            </div>
+
+            <div class="form-group">
+              <label for="fotos">Fotos do Produto</label>
+              <input type="file" id="fotos" name="fotos" multiple accept="image/*" />
+              <div class="help-text">Envie múltiplas imagens. Formatos: JPG, PNG, GIF</div>
+            </div>
+
+            <div class="form-group">
+              <label for="video">Vídeo de Demonstração</label>
+              <input type="file" id="video" name="video" accept="video/mp4,video/webm" />
+              <div class="help-text">Formatos aceitos: MP4, WebM</div>
+            </div>
+
+            <div class="form-group">
+              <label for="certificado">Certificado/Comprovante</label>
+              <input type="file" id="certificado" name="certificado" accept=".pdf,.jpg,.png" />
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="📤 Enviar Arquivos" />
+            <input type="reset" value="Limpar" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 7: FORMULÁRIO COM RADIO E CHECKBOX COMPLEXOS -->
+        <h2>7. Controles de Seleção Avançados</h2>
+        <form id="selecaoForm">
+          <fieldset>
+            <legend>Tipo de Conta</legend>
+
+            <div class="radio-group">
+              <div class="radio-item">
+                <input type="radio" id="tipo-pessoal" name="tipo" value="pessoal" checked />
+                <label for="tipo-pessoal">Conta Pessoal</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" id="tipo-empresa" name="tipo" value="empresa" />
+                <label for="tipo-empresa">Conta Empresarial</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" id="tipo-dev" name="tipo" value="desenvolvedor" />
+                <label for="tipo-dev">Conta de Desenvolvedor</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Permissões</legend>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="perm-leitura" name="permissoes" value="leitura" checked />
+                <label for="perm-leitura">Leitura de dados</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="perm-escrita" name="permissoes" value="escrita" />
+                <label for="perm-escrita">Escrita de dados</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="perm-delete" name="permissoes" value="delete" />
+                <label for="perm-delete">Deletar dados</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="perm-admin" name="permissoes" value="admin" />
+                <label for="perm-admin">Acesso administrativo</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferências</legend>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="notif-email" name="notificacoes" value="email" checked />
+                <label for="notif-email">Notificações por Email</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="notif-sms" name="notificacoes" value="sms" />
+                <label for="notif-sms">Notificações por SMS</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="notif-push" name="notificacoes" value="push" />
+                <label for="notif-push">Notificações Push</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="✓ Salvar Configurações" />
+            <input type="reset" value="Restaurar Padrões" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 8: FORMULÁRIO COM VALIDAÇÃO CUSTOMIZADA -->
+        <h2>8. Validação Avançada com Pattern e Validação em Tempo Real</h2>
+        <form id="validacaoForm">
+          <fieldset>
+            <legend>Dados de Registro</legend>
+
+            <div class="form-group">
+              <label for="usuario" required>Nome de Usuário</label>
+              <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                required
+                pattern="^[a-zA-Z0-9_]{3,20}$"
+                title="3-20 caracteres: letras, números e underscore"
+                placeholder="seu_usuario_123"
+              />
+              <div class="help-text">Entre 3 e 20 caracteres. Apenas letras, números e underscore</div>
+            </div>
+
+            <div class="form-group">
+              <label for="url-site" required>URL do Site</label>
+              <input type="url" id="url-site" name="url-site" required placeholder="https://exemplo.com.br" />
+              <div class="help-text">Deve ser uma URL válida com protocolo (http/https)</div>
+            </div>
+
+            <div class="form-group">
+              <label for="ip">Endereço IP</label>
+              <input
+                type="text"
+                id="ip"
+                name="ip"
+                pattern="^(\d{1,3}\.){3}\d{1,3}$"
+                placeholder="192.168.1.1"
+                title="Formato: XXX.XXX.XXX.XXX"
+              />
+              <div class="help-text">Formato: XXX.XXX.XXX.XXX (exemplo: 192.168.1.1)</div>
+            </div>
+
+            <div class="form-group">
+              <label for="hexcolor">Código Hexadecimal</label>
+              <input
+                type="text"
+                id="hexcolor"
+                name="hexcolor"
+                pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+                placeholder="#667eea"
+                title="Formato: #RRGGBB ou #RGB"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="hora24">Horário (24h)</label>
+              <input
+                type="text"
+                id="hora24"
+                name="hora24"
+                pattern="([01]\d|2[0-3]):[0-5]\d"
+                placeholder="14:30"
+                title="Formato: HH:MM (00:00 - 23:59)"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="linkedin">URL do LinkedIn</label>
+              <input
+                type="url"
+                id="linkedin"
+                name="linkedin"
+                pattern="https?://(www\.)?linkedin\.com/in/.*"
+                placeholder="https://www.linkedin.com/in/seu-perfil"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="github">Usuário GitHub</label>
+              <input
+                type="text"
+                id="github"
+                name="github"
+                pattern="[a-zA-Z0-9](-?[a-zA-Z0-9]){0,38}"
+                placeholder="seu-usuario"
+                maxlength="39"
+              />
+              <div class="help-text">Máximo 39 caracteres</div>
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="✓ Validar e Enviar" />
+            <input type="reset" value="Limpar" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 9: FORMULÁRIO COM ATRIBUTOS AVANÇADOS -->
+        <h2>9. Atributos HTML5 Avançados: Autocomplete, DataList, Disabled</h2>
+        <form id="autocompleteForm" autocomplete="off">
+          <fieldset>
+            <legend>Informações Pessoais com Autocomplete</legend>
+
+            <div class="form-group">
+              <label for="nome-completo">Nome Completo</label>
+              <input type="text" id="nome-completo" name="nome-completo" autocomplete="name" />
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="email-contato">Email</label>
+                <input type="email" id="email-contato" name="email-contato" autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="telefone-contato">Telefone</label>
+                <input type="tel" id="telefone-contato" name="telefone-contato" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="endereco-contato">Endereço</label>
+                <input type="text" id="endereco-contato" name="endereco-contato" autocomplete="street-address" />
+              </div>
+
+              <div class="form-group">
+                <label for="cidade-contato">Cidade</label>
+                <input type="text" id="cidade-contato" name="cidade-contato" autocomplete="address-level2" />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="estado-contato">Estado</label>
+                <input type="text" id="estado-contato" name="estado-contato" autocomplete="address-level1" />
+              </div>
+
+              <div class="form-group">
+                <label for="cep-contato">CEP</label>
+                <input type="text" id="cep-contato" name="cep-contato" autocomplete="postal-code" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Informações Profissionais</legend>
+
+            <div class="form-group">
+              <label for="cargo">Cargo</label>
+              <input type="text" id="cargo" name="cargo" list="cargos" autocomplete="job-title" />
+              <datalist id="cargos">
+                <option value="Desenvolvedor Frontend"></option>
+                <option value="Desenvolvedor Backend"></option>
+                <option value="Desenvolvedor Full Stack"></option>
+                <option value="Designer UX/UI"></option>
+                <option value="Gerente de Projeto"></option>
+                <option value="Analista de Dados"></option>
+                <option value="DevOps"></option>
+                <option value="QA Engineer"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="empresa" list="empresas" autocomplete="organization" />
+              <datalist id="empresas">
+                <option value="Google"></option>
+                <option value="Microsoft"></option>
+                <option value="Apple"></option>
+                <option value="Amazon"></option>
+                <option value="Meta"></option>
+                <option value="Netflix"></option>
+                <option value="Tesla"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label for="setor">Setor</label>
+              <input type="text" id="setor" name="setor" list="setores" />
+              <datalist id="setores">
+                <option value="Tecnologia"></option>
+                <option value="Finanças"></option>
+                <option value="Saúde"></option>
+                <option value="Educação"></option>
+                <option value="Varejo"></option>
+                <option value="Manufatura"></option>
+              </datalist>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Campos com Controle de Estado</legend>
+
+            <div class="form-group">
+              <label for="readonly-field">Campo Somente Leitura</label>
+              <input type="text" id="readonly-field" name="readonly-field" value="Não pode ser editado" readonly />
+              <div class="help-text">Este campo não pode ser modificado</div>
+            </div>
+
+            <div class="form-group">
+              <label for="disabled-field">Campo Desabilitado</label>
+              <input type="text" id="disabled-field" name="disabled-field" value="Desabilitado" disabled />
+              <div class="help-text">Este campo está desabilitado e não será enviado</div>
+            </div>
+
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="ativar-campo"
+                name="ativar-campo"
+                onchange="document.getElementById('campo-dinamico').disabled = !this.checked"
+              />
+              <label for="ativar-campo">Ativar campo adicional</label>
+            </div>
+
+            <div class="form-group" style="margin-top: 15px">
+              <label for="campo-dinamico">Campo Dinâmico</label>
+              <input
+                type="text"
+                id="campo-dinamico"
+                name="campo-dinamico"
+                placeholder="Ative o checkbox acima"
+                disabled
+              />
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="✓ Enviar Informações" />
+            <input type="reset" value="Limpar" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 10: FORMULÁRIO MULTI-STEP COM FIELDSETS -->
+        <h2>10. Formulário Multi-Etapa com Fieldsets Organizados</h2>
+        <form id="multiStepForm">
+          <fieldset>
+            <legend>Etapa 1: Informações Básicas</legend>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="ms-nome" required>Nome</label>
+                <input type="text" id="ms-nome" name="ms-nome" required />
+              </div>
+
+              <div class="form-group">
+                <label for="ms-email" required>Email</label>
+                <input type="email" id="ms-email" name="ms-email" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Etapa 2: Endereço</legend>
+
+            <div class="form-group">
+              <label for="ms-endereco" required>Endereço Completo</label>
+              <input type="text" id="ms-endereco" name="ms-endereco" required />
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="ms-numero" required>Número</label>
+                <input type="number" id="ms-numero" name="ms-numero" required />
+              </div>
+
+              <div class="form-group">
+                <label for="ms-complemento">Complemento</label>
+                <input type="text" id="ms-complemento" name="ms-complemento" />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="ms-cidade" required>Cidade</label>
+                <input type="text" id="ms-cidade" name="ms-cidade" required />
+              </div>
+
+              <div class="form-group">
+                <label for="ms-estado" required>Estado</label>
+                <input type="text" id="ms-estado" name="ms-estado" maxlength="2" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Etapa 3: Confirmação</legend>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="ms-termos" name="ms-termos" required />
+                <label for="ms-termos">Aceito os Termos e Condições</label>
+              </div>
+
+              <div class="checkbox-item">
+                <input type="checkbox" id="ms-privacidade" name="ms-privacidade" required />
+                <label for="ms-privacidade">Aceito a Política de Privacidade</label>
+              </div>
+
+              <div class="checkbox-item">
+                <input type="checkbox" id="ms-marketing" name="ms-marketing" />
+                <label for="ms-marketing">Desejo receber ofertas e promoções</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="✓ Concluir Cadastro" />
+            <input type="reset" value="Começar Novamente" />
+          </div>
+        </form>
+
+        <!-- EXEMPLO 11: FORMULÁRIO COM VALIDAÇÃO CONDICIONAL -->
+        <h2>11. Validação Condicional e Campos Dependentes</h2>
+        <form id="condicionalForm">
+          <fieldset>
+            <legend>Seleção de Serviço</legend>
+
+            <div class="radio-group">
+              <div class="radio-item">
+                <input type="radio" id="servico-web" name="servico" value="web" onchange="habilitarCampos()" />
+                <label for="servico-web">Desenvolvimento Web</label>
+              </div>
+
+              <div class="radio-item">
+                <input type="radio" id="servico-mobile" name="servico" value="mobile" onchange="habilitarCampos()" />
+                <label for="servico-mobile">Desenvolvimento Mobile</label>
+              </div>
+
+              <div class="radio-item">
+                <input type="radio" id="servico-dados" name="servico" value="dados" onchange="habilitarCampos()" />
+                <label for="servico-dados">Análise de Dados</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="campos-web" style="display: none">
+            <legend>Especificações - Web</legend>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" name="tech-web" value="react" />
+                <label>React</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="tech-web" value="vue" />
+                <label>Vue</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="tech-web" value="angular" />
+                <label>Angular</label>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 15px">
+              <label for="responsivo">Deve ser responsivo?</label>
+              <select id="responsivo" name="responsivo">
+                <option value="">Selecione uma opção</option>
+                <option value="sim">Sim, mobile-first</option>
+                <option value="nao">Não necessário</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset id="campos-mobile" style="display: none">
+            <legend>Especificações - Mobile</legend>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" name="platform-mobile" value="ios" />
+                <label>iOS</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="platform-mobile" value="android" />
+                <label>Android</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="platform-mobile" value="ambos" />
+                <label>Ambos</label>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 15px">
+              <label for="nativo">Nativo ou Híbrido?</label>
+              <select id="nativo" name="nativo">
+                <option value="">Selecione uma opção</option>
+                <option value="nativo">Nativo (melhor performance)</option>
+                <option value="hibrido">Híbrido (menor custo)</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset id="campos-dados" style="display: none">
+            <legend>Especificações - Análise de Dados</legend>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" name="tool-dados" value="python" />
+                <label>Python</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="tool-dados" value="r" />
+                <label>R</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="tool-dados" value="sql" />
+                <label>SQL/Database</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="tool-dados" value="powerbi" />
+                <label>Power BI</label>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 15px">
+              <label for="volume">Volume de Dados Esperado</label>
+              <input type="number" id="volume" name="volume" min="1" placeholder="Em GB" />
+            </div>
+          </fieldset>
+
+          <fieldset style="margin-top: 20px">
+            <legend>Detalhes do Projeto</legend>
+
+            <div class="form-group">
+              <label for="descricao" required>Descrição Detalhada</label>
+              <textarea
+                id="descricao"
+                name="descricao"
+                required
+                minlength="20"
+                placeholder="Descreva seu projeto em detalhes..."
+              ></textarea>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="orcamento">Orçamento (R$)</label>
+                <input type="number" id="orcamento" name="orcamento" min="1000" step="500" />
+              </div>
+
+              <div class="form-group">
+                <label for="prazo">Prazo (dias)</label>
+                <input type="number" id="prazo" name="prazo" min="7" step="1" />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="button-group">
+            <input type="submit" value="✓ Enviar Proposta" />
+            <input type="reset" value="Limpar" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

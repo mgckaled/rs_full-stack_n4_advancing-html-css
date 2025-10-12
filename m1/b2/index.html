@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Flexbox Profissional</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <nav>
+          <a href="#" class="active">📊 Resumo</a>
+          <a href="#">📦 Produtos</a>
+          <a href="#">👥 Clientes</a>
+          <a href="#">💰 Vendas</a>
+          <a href="#">⚙️ Configurações</a>
+        </nav>
+        <div class="sidebar-footer">© 2024 Dashboard Co.</div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+        <!-- HEADER -->
+        <header class="header">
+          <h1>Bem-vindo ao Dashboard</h1>
+          <div class="header-actions">
+            <button>📥 Exportar</button>
+            <button>🔔</button>
+            <div class="user-info">
+              <div class="avatar">JD</div>
+              <span>João Dev</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- CONTENT AREA -->
+        <div class="content">
+          <!-- STATS CARDS -->
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-label">Receita</div>
+              <div class="stat-value">R$ 45.2K</div>
+              <div class="stat-change">↑ 12% vs mês anterior</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Pedidos</div>
+              <div class="stat-value">1,247</div>
+              <div class="stat-change">↑ 8% vs mês anterior</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Clientes</div>
+              <div class="stat-value">523</div>
+              <div class="stat-change">↑ 15% vs mês anterior</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Taxa Conversão</div>
+              <div class="stat-value">3.24%</div>
+              <div class="stat-change">↓ 2% vs mês anterior</div>
+            </div>
+          </div>
+
+          <!-- PRODUCTS SECTION -->
+          <div class="products-container">
+            <div class="products-header">
+              <h2>Produtos Populares</h2>
+              <input type="text" class="search-box" placeholder="🔍 Buscar produtos..." />
+            </div>
+
+            <div class="products-grid">
+              <!-- CARD 1 -->
+              <div class="product-card">
+                <div class="product-image">📱</div>
+                <div class="product-info">
+                  <div class="product-name">Smartphone Pro</div>
+                  <div class="product-description">Última geração com câmera avançada</div>
+                  <div class="product-footer">
+                    <div class="product-price">R$ 1,299</div>
+                    <button class="product-btn">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="product-card">
+                <div class="product-image">💻</div>
+                <div class="product-info">
+                  <div class="product-name">Laptop Ultra</div>
+                  <div class="product-description">Performance máxima para desenvolvedores</div>
+                  <div class="product-footer">
+                    <div class="product-price">R$ 3,499</div>
+                    <button class="product-btn">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                  <div class="product-name">Smart Watch</div>
+                  <div class="product-description">Rastreamento de saúde e fitness</div>
+                  <div class="product-footer">
+                    <div class="product-price">R$ 599</div>
+                    <button class="product-btn">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 4 -->
+              <div class="product-card">
+                <div class="product-image">🎧</div>
+                <div class="product-info">
+                  <div class="product-name">Fones Premium</div>
+                  <div class="product-description">Som de qualidade studio profissional</div>
+                  <div class="product-footer">
+                    <div class="product-price">R$ 799</div>
+                    <button class="product-btn">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 5 -->
+              <div class="product-card">
+                <div class="product-image">🖥️</div>
+                <div class="product-info">
+                  <div class="product-name">Monitor 4K</div>
+                  <div class="product-description">Resolução ultra-alta para criadores</div>
+                  <div class="product-footer">
+                    <div class="product-price">R$ 1,899</div>
+                    <button class="product-btn">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 6 -->
+              <div class="product-card">
+                <div class="product-image">⌨️</div>
+                <div class="product-info">
+                  <div class="product-name">Teclado Mecânico</div>
+                  <div class="product-description">RGB com switches customizáveis</div>
+                  <div class="product-footer">
+                    <div class="product-price">R$ 449</div>
+                    <button class="product-btn">Comprar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

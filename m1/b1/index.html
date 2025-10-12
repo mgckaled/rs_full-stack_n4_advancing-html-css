@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - CSS Layouts & Evolution</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- HEADER FIXO -->
+    <header>
+      <div class="header-content">
+        <div class="logo">DevStudio</div>
+        <nav>
+          <a href="#" class="active">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#testimonials">Testimonials</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Criando Experiências Web Incríveis</h1>
+          <p>Desenvolvimento front-end moderno com CSS, HTML e JavaScript</p>
+          <button class="cta-button">Começar Agora</button>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section class="skills-section" id="skills">
+        <h2 class="section-title">Minhas Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <h3>CSS Layouts</h3>
+            <p>Flexbox, Grid e técnicas modernas de posicionamento</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Otimização de renderização e carregamento</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📱</div>
+            <h3>Responsividade</h3>
+            <p>Design que funciona em todos os dispositivos</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🔧</div>
+            <h3>JavaScript</h3>
+            <p>Interatividade e manipulação do DOM</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🎯</div>
+            <h3>UX/UI</h3>
+            <p>Interfaces intuitivas e acessíveis</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🚀</div>
+            <h3>Deploy</h3>
+            <p>CI/CD e automação de produção</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section class="projects-section" id="projects">
+        <div class="projects-container">
+          <h2 class="section-title">Projetos Destaque</h2>
+
+          <div class="project-item">
+            <div class="project-image">💰</div>
+            <div class="project-content">
+              <h3>Dashboard Financeiro</h3>
+              <p>
+                Plataforma de análise de gastos com visualizações em tempo real. Utiliza Flexbox e CSS Grid para layout
+                responsivo e variáveis CSS para temas customizáveis.
+              </p>
+              <div class="project-tags">
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Flexbox</span>
+                <span class="tag">Variáveis CSS</span>
+                <span class="tag">Responsividade</span>
+              </div>
+              <button class="cta-button">Ver Projeto</button>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-image">🛍️</div>
+            <div class="project-content">
+              <h3>E-commerce Moderno</h3>
+              <p>
+                Loja online com filtros avançados e carrinho de compras. Pseudo-elementos criaram efeitos visuais
+                sofisticados e pseudo-classes gerenciam estados interativos.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Position</span>
+                <span class="tag">Pseudo-elementos</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Animations</span>
+              </div>
+              <button class="cta-button">Ver Projeto</button>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-image">📱</div>
+            <div class="project-content">
+              <h3>App Portfólio</h3>
+              <p>
+                Aplicação mobile-first com navegação smoothly animada. Utiliza position: sticky para headers e variáveis
+                CSS para consistência visual.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Mobile-first</span>
+                <span class="tag">Position Sticky</span>
+                <span class="tag">CSS Animations</span>
+                <span class="tag">Acessibilidade</span>
+              </div>
+              <button class="cta-button">Ver Projeto</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+      <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title">O que Dizem</h2>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            Trabalhar com esse desenvolvedor foi uma experiência excelente. O código é limpo, bem estruturado e a
+            atenção aos detalhes é notável.
+          </p>
+          <p class="testimonial-author">Maria Silva - CEO TechCorp</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            Entrega rápida, comunicação clara e resultado que superou expectativas. Recomendo fortemente!
+          </p>
+          <p class="testimonial-author">João Santos - Founder StartupXYZ</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            A expertise em CSS moderno e responsividade é impressionante. Projeto ficou perfeito em todos os
+            dispositivos.
+          </p>
+          <p class="testimonial-author">Ana Costa - Designer - DesignStudio</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>DevStudio</h4>
+          <p>Criando web experiences inovadoras desde 2020</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links Rápidos</h4>
+          <p>
+            <a href="#" style="color: inherit">Blog</a> • <a href="#" style="color: inherit">Docs</a> •
+            <a href="#" style="color: inherit">Contato</a>
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Redes Sociais</h4>
+          <div class="social-links">
+            <a href="#">f</a>
+            <a href="#">𝕏</a>
+            <a href="#">in</a>
+            <a href="#">gh</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <script>
+      // Ativar botão de scroll quando scroll > 200px
+      const scrollToTopBtn = document.getElementById("scrollToTop")
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          scrollToTopBtn.classList.add("show")
+        } else {
+          scrollToTopBtn.classList.remove("show")
+        }
+      })
+
+      // Scroll suave ao clicar
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      })
+
+      // Navegação ativa baseada no scroll
+      const navLinks = document.querySelectorAll("nav a")
+      window.addEventListener("scroll", () => {
+        let current = ""
+        const sections = document.querySelectorAll("section")
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop
+          if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute("id")
+          }
+        })
+
+        navLinks.forEach(link => {
+          link.classList.remove("active")
+          if (link.getAttribute("href").slice(1) === current) {
+            link.classList.add("active")
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
