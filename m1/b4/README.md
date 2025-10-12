@@ -1,4 +1,11 @@
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
+
 # GridDash
+
+<p align="center">
+  <img alt="Thumbnail - Portal de Notícias" src="../../.github/assets/images/tn_griddash.png" width="60%" />
+</p>
 
 ## `/src`
 
@@ -79,7 +86,7 @@ grid-auto-rows: 200px;
 
 ---
 
-## 🔍 Tópicos em Ação
+## Tópicos em Ação
 
 | Tópico                    | Onde Ver                          | Como Funciona                                     |
 | ------------------------- | --------------------------------- | ------------------------------------------------- |
@@ -95,7 +102,7 @@ grid-auto-rows: 200px;
 
 ---
 
-## 💡 Dicas para Aprender
+## Dicas para Aprender
 
 1. **Abra o Inspector** (F12) e veja a estrutura do grid em tempo real
 2. **Mude o tamanho da tela** — Veja como o grid se adapta

@@ -1,4 +1,11 @@
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
+
 # Dashboard
+
+<p align="center">
+  <img alt="Thumbnail - Portal de Notícias" src="../../.github/assets/images/tn_dashbord.png" width="60%" />
+</p>
 
 ## Layout Principal
 

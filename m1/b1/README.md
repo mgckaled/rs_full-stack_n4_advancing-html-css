@@ -1,4 +1,11 @@
-# Portfólio / Landing Page
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
+
+# Portfólio / Landing Page (DevStudio)
+
+<p align="center">
+  <img alt="Thumbnail - Portal de Notícias" src="../../.github/assets/images/tn_devstudio.png" width="60%" />
+</p>
 
 ## INTRODUÇÃO
 
@@ -10,7 +17,7 @@
 - **`position: fixed`** — Header que fica no topo ao scrollar
 - **`position: relative`** — Hero section e skill cards como base para children
 - **`position: absolute`** — Decorações (orbs flutuantes, setas, aspas), sobreposições
-- **`position: sticky`** — (Comentado, mas o conceito está no design - títulos de seção)
+- **`position: sticky`** — (títulos de seção)
 - **Scroll-to-top button** — Outro exemplo de `fixed`
 
 ## VARIÁVEIS CSS (Completas e Profissionais)

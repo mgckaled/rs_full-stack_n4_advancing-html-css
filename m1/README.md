@@ -39,9 +39,3 @@ Neste projeto do Perfil de Viagens, exploramos conceitos como Display Flex e var
 
 - [Arquivos do projeto](./b5)
 - [Layout (Figma)](https://www.figma.com/community/file/1362166020452569562)
-
-<br>
-
-<p align="center">
-  <img alt="Thumbnail - Portal de Notícias" src="../.github/assets/images/tn_portal-de-noticias.png" width="850px" />
-</p>
