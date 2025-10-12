@@ -1,49 +1,21 @@
-# Formulários HTML
 
-## Sobre
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
 
-Repositório pessoal de registro, referência e suporte para fins de aprendizado, consulta e acompanhamento do curso de **Formulários** (bloco 2), **Avançando no HTML e CSS** (Nível 4), da formação **Full-Stack**, desenvolvido pela Faculdade de Tecnologia Rocketseat (FTR).
+<p align="center">
+  <img alt="Logo - Rocketseat" src="../.github/assets/images/logo_rocketseat.png" width="200px" />
+</p>
 
-> Conceitos importatnes: [`forms.md`](./.github/docs/content/forms.md)
+# Módulo 2 - Formulários
 
----
+## Bloco 1 - Formulários HTML
 
-## 📁 Estrutura de Arquivos
+**Tópicos**: Input (text, number, email, password, file, range, color), CheckBox, Radio e Hidden, Novos Inputs, Label, Textarea, Select, Fieldset.
 
-```plaintext
-src/
-├── index.html      (Estrutura HTML)
-├── styles.css      (Estilos)
-└── script.js       (Lógica JavaScript)
-```
+- [Guia de Referência](../.github/docs/content/m2/b1.md)
+- [Projeto Aplicado - HTML5 Forms: Exemplos](./b1)
 
-## 📋 O que cada arquivo contém
+## Bloco 2 - Projeto: Formulário de Matrícula
 
-### `index.html`
-
-- 11 formulários profissionais completos
-- Toda a estrutura HTML5
-- Link externo para `styles.css`
-- Script carregando `script.js` no final
-
-### `styles.css`
-
-- Design responsivo e moderno
-- Validação visual (cores green/red)
-- Gradientes e efeitos
-- Media queries para mobile
-- Styling de todos os elementos de formulário
-
-### `script.js`
-
-- ✅ Cálculo de frete dinâmico
-- ✅ Validação em tempo real
-- ✅ Formatação automática (CPF, telefone, CEP)
-- ✅ Campos dinâmicos (aparecem/desaparecem)
-- ✅ Manipulação de dados de formulários
-- ✅ Exportação como JSON/CSV
-- ✅ Validação de senha forte
-- ✅ Contador de caracteres
-- ✅ Detecção de mudanças não salvas
-- ✅ Logger de eventos
-- ✅ E muito mais!
+- [Arquivos do projeto](./b2)
+- [Layout (Figma)](https://www.figma.com/community/file/1365016793556649696)
