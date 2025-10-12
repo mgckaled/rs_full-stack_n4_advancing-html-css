@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
     <title>Portfólio - CSS Layouts & Evolution</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- HEADER FIXO -->
@@ -186,41 +189,6 @@
     <!-- SCROLL TO TOP BUTTON -->
     <button class="scroll-to-top" id="scrollToTop">↑</button>
 
-    <script>
-      // Ativar botão de scroll quando scroll > 200px
-      const scrollToTopBtn = document.getElementById("scrollToTop")
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 200) {
-          scrollToTopBtn.classList.add("show")
-        } else {
-          scrollToTopBtn.classList.remove("show")
-        }
-      })
-
-      // Scroll suave ao clicar
-      scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" })
-      })
-
-      // Navegação ativa baseada no scroll
-      const navLinks = document.querySelectorAll("nav a")
-      window.addEventListener("scroll", () => {
-        let current = ""
-        const sections = document.querySelectorAll("section")
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop
-          if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute("id")
-          }
-        })
-
-        navLinks.forEach(link => {
-          link.classList.remove("active")
-          if (link.getAttribute("href").slice(1) === current) {
-            link.classList.add("active")
-          }
-        })
-      })
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

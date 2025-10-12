@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard CSS Grid - Exemplo Profissional</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-logo">📊 GridDash</div>
+        <div class="header-title">Dashboard Analytics</div>
+        <div class="header-actions">
+          <button class="btn-theme" id="themeToggle">🌙</button>
+          <div class="user-avatar">JD</div>
+        </div>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active" data-section="overview">📈 Overview</a>
+          <a href="#" class="nav-item" data-section="analytics">📊 Analytics</a>
+          <a href="#" class="nav-item" data-section="reports">📄 Reports</a>
+          <a href="#" class="nav-item" data-section="settings">⚙️ Settings</a>
+        </nav>
+        <div class="sidebar-footer">© 2024 GridDash</div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- SECTION: OVERVIEW (Padrão) -->
+        <section class="content-section" id="overview" style="display: grid">
+          <!-- Filtros -->
+          <div class="filters-area">
+            <input type="date" id="dateFilter" class="filter-input" />
+            <select id="categoryFilter" class="filter-input">
+              <option value="">Todas as Categorias</option>
+              <option value="sales">Vendas</option>
+              <option value="marketing">Marketing</option>
+              <option value="operations">Operações</option>
+            </select>
+            <button class="btn-primary" id="applyFilters">Aplicar Filtros</button>
+          </div>
+
+          <!-- Cards de Resumo (4 colunas em desktop) -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">💰</div>
+              <div class="stat-info">
+                <div class="stat-label">Receita Total</div>
+                <div class="stat-value">R$ 125.4K</div>
+                <div class="stat-change positive">↑ 12% vs mês anterior</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">📦</div>
+              <div class="stat-info">
+                <div class="stat-label">Pedidos</div>
+                <div class="stat-value">2,543</div>
+                <div class="stat-change positive">↑ 8% vs mês anterior</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">👥</div>
+              <div class="stat-info">
+                <div class="stat-label">Clientes Ativos</div>
+                <div class="stat-value">1,205</div>
+                <div class="stat-change positive">↑ 15% vs mês anterior</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⭐</div>
+              <div class="stat-info">
+                <div class="stat-label">Satisfação</div>
+                <div class="stat-value">4.8/5.0</div>
+                <div class="stat-change positive">↑ 0.3 vs mês anterior</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Principal com Template Areas -->
+          <div class="dashboard-grid">
+            <!-- Chart Principal (Grande) -->
+            <div class="chart-card chart-main">
+              <h3>Receita por Mês</h3>
+              <div class="chart-placeholder">📈 Gráfico Principal</div>
+            </div>
+
+            <!-- Top Produtos -->
+            <div class="chart-card chart-top">
+              <h3>Top 5 Produtos</h3>
+              <div class="chart-placeholder">🏆 Ranking</div>
+            </div>
+
+            <!-- Conversão por Fonte -->
+            <div class="chart-card chart-conversion">
+              <h3>Conversão por Fonte</h3>
+              <div class="chart-placeholder">🎯 Funil</div>
+            </div>
+
+            <!-- Tabela de Vendas Recentes -->
+            <div class="chart-card chart-table">
+              <h3>Vendas Recentes</h3>
+              <table class="sales-table">
+                <thead>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Produto A</td>
+                    <td>R$ 1,200</td>
+                    <td><span class="badge completed">✓ Completo</span></td>
+                  </tr>
+                  <tr>
+                    <td>Produto B</td>
+                    <td>R$ 800</td>
+                    <td><span class="badge pending">⏳ Pendente</span></td>
+                  </tr>
+                  <tr>
+                    <td>Produto C</td>
+                    <td>R$ 1,500</td>
+                    <td><span class="badge completed">✓ Completo</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Pequenos Cards de Insights -->
+            <div class="insight-card">
+              <h4>📲 Mobile Traffic</h4>
+              <div class="insight-value">65%</div>
+              <div class="insight-bar"><div class="bar-fill" style="width: 65%"></div></div>
+            </div>
+
+            <div class="insight-card">
+              <h4>🌐 Desktop Traffic</h4>
+              <div class="insight-value">35%</div>
+              <div class="insight-bar"><div class="bar-fill" style="width: 35%"></div></div>
+            </div>
+
+            <div class="insight-card">
+              <h4>🔄 Taxa de Retorno</h4>
+              <div class="insight-value">28%</div>
+              <div class="insight-bar"><div class="bar-fill" style="width: 28%"></div></div>
+            </div>
+
+            <div class="insight-card">
+              <h4>⏱️ Tempo Médio</h4>
+              <div class="insight-value">3m 24s</div>
+              <div class="insight-bar"><div class="bar-fill" style="width: 42%"></div></div>
+            </div>
+          </div>
+
+          <!-- Grid Responsivo com Auto-Fit -->
+          <div class="responsive-grid">
+            <h3 style="grid-column: 1 / -1">Produtos em Destaque</h3>
+
+            <div class="product-card">
+              <div class="product-image">🎁</div>
+              <div class="product-name">Premium Pack</div>
+              <div class="product-price">R$ 299</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">💎</div>
+              <div class="product-name">Deluxe Edition</div>
+              <div class="product-price">R$ 499</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">🚀</div>
+              <div class="product-name">Pro Version</div>
+              <div class="product-price">R$ 699</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">⚡</div>
+              <div class="product-name">Enterprise</div>
+              <div class="product-price">Custom</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">🌟</div>
+              <div class="product-name">Platinum</div>
+              <div class="product-price">R$ 999</div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">🎯</div>
+              <div class="product-name">Starter</div>
+              <div class="product-price">R$ 99</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION: ANALYTICS (Alternativa) -->
+        <section class="content-section analytics-layout" id="analytics" style="display: none">
+          <div class="analytics-header">
+            <h2>Análise Detalhada</h2>
+            <p>Métricas aprofundadas e tendências</p>
+          </div>
+          <div class="analytics-grid">
+            <div class="metric-card">
+              <h4>Conversão por Dia</h4>
+              <div class="metric-value">3.24%</div>
+            </div>
+            <div class="metric-card">
+              <h4>Ticket Médio</h4>
+              <div class="metric-value">R$ 450</div>
+            </div>
+            <div class="metric-card">
+              <h4>Taxa de Rejeição</h4>
+              <div class="metric-value">32%</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION: REPORTS (Alternativa) -->
+        <section class="content-section" id="reports" style="display: none">
+          <h2>Relatórios</h2>
+          <p>Seção de relatórios em desenvolvimento...</p>
+        </section>
+
+        <!-- SECTION: SETTINGS (Alternativa) -->
+        <section class="content-section" id="settings" style="display: none">
+          <h2>Configurações</h2>
+          <p>Seção de configurações em desenvolvimento...</p>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>GridDash Pro</h4>
+            <p>Dashboard moderno com CSS Grid</p>
+          </div>
+          <div class="footer-section">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="#">Documentação</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Suporte</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Status</h4>
+            <p>✓ Todos os serviços operacionais</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 GridDash. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
