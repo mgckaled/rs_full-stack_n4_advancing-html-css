@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Functions Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">CSS Functions Gallery</h1>
+        <p class="hero-subtitle">Uma jornada interativa pelas funções mais poderosas do CSS moderno</p>
+
+        <div class="cube-container">
+          <div class="cube">
+            <div class="cube-face" data-content="calc()"></div>
+            <div class="cube-face" data-content="clamp()"></div>
+            <div class="cube-face" data-content="color-mix()"></div>
+            <div class="cube-face" data-content="filter()"></div>
+            <div class="cube-face" data-content="transform()"></div>
+            <div class="cube-face" data-content="gradient()"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES GRID -->
+    <section class="features">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🎨</div>
+        <h3 class="feature-title">Color Functions</h3>
+        <p class="feature-description">
+          Manipule cores com HSL, RGB, color-mix() e espaços de cor modernos como oklch() para resultados
+          perceptualmente precisos.
+        </p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📐</div>
+        <h3 class="feature-title">Math Functions</h3>
+        <p class="feature-description">
+          Cálculos dinâmicos com calc(), min(), max(), clamp() e funções trigonométricas para layouts responsivos.
+        </p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔄</div>
+        <h3 class="feature-title">Transform Functions</h3>
+        <p class="feature-description">
+          Transformações 2D e 3D com rotate(), scale(), translate() e perspective() para animações impressionantes.
+        </p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🌈</div>
+        <h3 class="feature-title">Gradient Functions</h3>
+        <p class="feature-description">
+          Gradientes lineares, radiais e cônicos com linear-gradient(), radial-gradient() e conic-gradient().
+        </p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon">✂️</div>
+        <h3 class="feature-title">Shape Functions</h3>
+        <p class="feature-description">
+          Recorte elementos com clip-path usando circle(), polygon(), ellipse() e path() para formas complexas.
+        </p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🎭</div>
+        <h3 class="feature-title">Filter Functions</h3>
+        <p class="feature-description">
+          Aplique efeitos visuais com blur(), brightness(), contrast(), hue-rotate() e backdrop-filter().
+        </p>
+      </div>
+    </section>
+
+    <!-- COLOR MIXER DEMO -->
+    <section class="color-mixer">
+      <h2 class="mixer-title fade-in">Color Mixer - color-mix() em Ação</h2>
+
+      <div class="mixer-controls fade-in">
+        <div class="control-group">
+          <label for="color1">Cor 1 (Hue)</label>
+          <input type="range" id="color1" min="0" max="360" value="280" />
+          <span id="color1-value">280°</span>
+        </div>
+
+        <div class="control-group">
+          <label for="color2">Cor 2 (Hue)</label>
+          <input type="range" id="color2" min="0" max="360" value="180" />
+          <span id="color2-value">180°</span>
+        </div>
+
+        <div class="control-group">
+          <label for="mix-amount">Mix Amount</label>
+          <input type="range" id="mix-amount" min="0" max="100" value="50" />
+          <span id="mix-value">50%</span>
+        </div>
+      </div>
+
+      <div class="mixer-result fade-in" id="mixer-result">Resultado da Mistura</div>
+    </section>
+
+    <!-- SHAPE MORPHING -->
+    <section class="shapes-section">
+      <h2 class="section-title fade-in">Shape Functions - clip-path()</h2>
+      <div class="shapes-grid">
+        <div class="shape-item shape-circle fade-in">
+          <span>Circle</span>
+        </div>
+        <div class="shape-item shape-polygon fade-in">
+          <span>Polygon</span>
+        </div>
+        <div class="shape-item shape-star fade-in">
+          <span>Star</span>
+        </div>
+        <div class="shape-item shape-hexagon fade-in">
+          <span>Hexagon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRADIENT PLAYGROUND -->
+    <section class="gradient-playground">
+      <h2 class="section-title fade-in">Gradient Functions</h2>
+      <div class="gradient-showcase">
+        <div class="gradient-box gradient-linear fade-in">Linear Gradient</div>
+        <div class="gradient-box gradient-radial fade-in">Radial Gradient</div>
+        <div class="gradient-box gradient-conic fade-in">Conic Gradient</div>
+        <div class="gradient-box gradient-repeating fade-in">Repeating Linear</div>
+      </div>
+    </section>
+
+    <!-- TRANSFORM GALLERY -->
+    <section class="transform-gallery">
+      <h2 class="section-title fade-in">Transform Functions</h2>
+      <div class="transform-grid">
+        <div class="transform-item transform-rotate fade-in">Rotate</div>
+        <div class="transform-item transform-scale fade-in">Scale</div>
+        <div class="transform-item transform-skew fade-in">Skew</div>
+        <div class="transform-item transform-3d fade-in">3D Rotate</div>
+        <div class="transform-item transform-translate fade-in">Translate</div>
+        <div class="transform-item transform-multiple fade-in">Multiple</div>
+      </div>
+    </section>
+
+    <!-- MATH FUNCTIONS DEMO -->
+    <section class="math-demo">
+      <h2 class="section-title fade-in">Math Functions</h2>
+      <div class="math-examples">
+        <div class="math-example calc-demo fade-in">
+          <h3 class="math-example-title">calc() - Cálculos Dinâmicos</h3>
+          <p>Combine diferentes unidades e operadores matemáticos</p>
+          <div class="math-visual">
+            <div class="math-box">100% - 20px</div>
+            <div class="math-box">50% + 10px</div>
+            <div class="math-box">100% / 3</div>
+          </div>
+        </div>
+
+        <div class="math-example minmax-demo fade-in">
+          <h3 class="math-example-title">min(), max(), clamp()</h3>
+          <p>Valores responsivos e adaptativos</p>
+          <div class="math-visual">
+            <div class="math-box">min(100%, 100px)</div>
+            <div class="math-box">max(50%, 80px)</div>
+            <div class="math-box">clamp(60px, 50%, 100px)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER EFFECTS -->
+    <section class="filters-section">
+      <h2 class="section-title fade-in">Filter Functions - Passe o mouse</h2>
+      <div class="filters-grid">
+        <div class="filter-item filter-blur fade-in">Blur</div>
+        <div class="filter-item filter-brightness fade-in">Brightness</div>
+        <div class="filter-item filter-contrast fade-in">Contrast</div>
+        <div class="filter-item filter-grayscale fade-in">Grayscale</div>
+        <div class="filter-item filter-hue fade-in">Hue Rotate</div>
+        <div class="filter-item filter-saturate fade-in">Saturate</div>
+        <div class="filter-item filter-invert fade-in">Invert</div>
+        <div class="filter-item filter-sepia fade-in">Sepia</div>
+        <div class="filter-item filter-drop-shadow fade-in">Drop Shadow</div>
+        <div class="filter-item filter-combined fade-in">Combined</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content fade-in">
+        <h2 class="footer-title">CSS Functions</h2>
+        <p class="footer-text">
+          Este site demonstra o poder das funções CSS modernas, desde cálculos matemáticos até transformações 3D,
+          filtros avançados e manipulação de cores. Todas as animações e efeitos foram criados usando apenas CSS puro,
+          sem dependências externas.
+        </p>
+        <p class="footer-text">Criado com HTML, CSS e JavaScript vanilla.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
