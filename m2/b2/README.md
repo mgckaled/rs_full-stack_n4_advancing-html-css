@@ -10,7 +10,7 @@
 <br>
 
 <p align="center">
-  <img alt="Thumbnail - Portal de Notícias" src="../../.github/assets/images/tn_form-matricula.png" width="60%" />
+  <img alt="Thumbnail - Formulário de Matrícula" src="../../.github/assets/images/tn_form-matricula.png" width="60%" />
 </p>
 
 ## Descrição
