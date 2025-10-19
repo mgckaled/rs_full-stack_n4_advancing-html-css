@@ -20,7 +20,7 @@
 - **`position: sticky`** — (títulos de seção)
 - **Scroll-to-top button** — Outro exemplo de `fixed`
 
-## VARIÁVEIS CSS (Completas e Profissionais)
+## VARIÁVEIS CSS
 
 ```css
 :root {

@@ -4,7 +4,7 @@
 # GridDash
 
 <p align="center">
-  <img alt="Thumbnail - Portal de Notícias" src="../../.github/assets/images/tn_griddash.png" width="60%" />
+  <img alt="Preview da page de Dashboard" src="../../.github/assets/images/tn_griddash.png" width="60%" />
 </p>
 
 ## `/src`

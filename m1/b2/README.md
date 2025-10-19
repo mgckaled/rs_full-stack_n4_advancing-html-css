@@ -4,7 +4,7 @@
 # Dashboard
 
 <p align="center">
-  <img alt="Thumbnail - Portal de Notícias" src="../../.github/assets/images/tn_dashbord.png" width="60%" />
+  <img alt="Preview do layout do Dashboard" src="../../.github/assets/images/tn_dashbord.png" width="60%" />
 </p>
 
 ## Layout Principal

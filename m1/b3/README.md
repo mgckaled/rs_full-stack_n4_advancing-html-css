@@ -12,7 +12,7 @@ Projeto desenvolvido com HTML e CSS para compartilhar viagens, cultura e gastron
 <br>
 
 <p align="center">
-  <img alt="Thumbnail - Portal de Notícias" src="../../.github/assets/images/tn_perfil-viagens.png" width="60%" />
+  <img alt="Preview do Layout do blog Travelgran" src="../../.github/assets/images/tn_perfil-viagens.png" width="60%" />
 </p>
 
 ## Layout
