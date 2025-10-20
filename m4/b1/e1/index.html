@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso Básico - Media Queries</title>
+
+    <link rel="stylesheet" href="./src/styles.css" />
+
+    <script src="./src/script.js" defer></script>
+  </head>
+  <body>
+    <div class="debug-indicator"></div>
+
+    <header class="header">
+      <h1>Media Queries - Uso Básico</h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Redimensione a janela do navegador</h2>
+        <p>Observe como o layout se adapta aos diferentes tamanhos de tela.</p>
+      </section>
+
+      <section class="cards">
+        <article class="card">
+          <div class="card-icon">📱</div>
+          <h3>Mobile</h3>
+          <p>Layout em coluna única, otimizado para telas pequenas.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">💻</div>
+          <h3>Tablet</h3>
+          <p>Layout em duas colunas, aproveitando melhor o espaço.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🖥️</div>
+          <h3>Desktop</h3>
+          <p>Layout em três colunas com mais recursos visuais.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📺</div>
+          <h3>Large Desktop</h3>
+          <p>Layout em quatro colunas para telas extra grandes.</p>
+        </article>
+      </section>
+
+      <section class="info-box">
+        <h3>Informações sobre Media Queries</h3>
+        <p>
+          Este exemplo demonstra o conceito Mobile-First, onde começamos com estilos para dispositivos móveis e
+          progressivamente adicionamos estilos para telas maiores.
+        </p>
+        <ul>
+          <li><strong>Mobile:</strong> &lt; 600px (base)</li>
+          <li><strong>Tablet:</strong> ≥ 600px</li>
+          <li><strong>Desktop:</strong> ≥ 900px</li>
+          <li><strong>Large Desktop:</strong> ≥ 1200px</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 - Exemplo de Media Queries</p>
+    </footer>
+  </body>
+</html>

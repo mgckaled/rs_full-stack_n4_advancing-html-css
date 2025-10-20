@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Exemplo Avançado - Media Queries</title>
+
+    <link rel="stylesheet" href="./src/styles.css" />
+
+    <script src="./src/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Dashboard responsivo com múltiplas features -->
+
+    <div class="app-container">
+      <!-- Sidebar responsiva -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Dashboard</h2>
+          <button class="sidebar-toggle" aria-label="Toggle sidebar">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#home" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+          </a>
+          <a href="#analytics" class="nav-item">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">Analytics</span>
+          </a>
+          <a href="#reports" class="nav-item">
+            <span class="nav-icon">📄</span>
+            <span class="nav-label">Reports</span>
+          </a>
+          <a href="#settings" class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Settings</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-profile">
+            <div class="user-avatar">👤</div>
+            <div class="user-info">
+              <div class="user-name">João Silva</div>
+              <div class="user-role">Admin</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Conteúdo principal -->
+      <main class="main-content">
+        <!-- Header com controles -->
+        <header class="page-header">
+          <div class="header-left">
+            <h1 class="page-title">Dashboard Analytics</h1>
+            <p class="page-subtitle">Bem-vindo de volta!</p>
+          </div>
+
+          <div class="header-right">
+            <button class="theme-toggle" aria-label="Toggle theme" title="Alternar tema">
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button class="notifications-btn" aria-label="Notifications">
+              <span class="notification-icon">🔔</span>
+              <span class="notification-badge">3</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Grid de estatísticas -->
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon stat-icon-primary">👥</div>
+            <div class="stat-content">
+              <h3 class="stat-label">Total Users</h3>
+              <p class="stat-value">12,458</p>
+              <span class="stat-change stat-change-positive">+12.5%</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon stat-icon-success">💰</div>
+            <div class="stat-content">
+              <h3 class="stat-label">Revenue</h3>
+              <p class="stat-value">$84,290</p>
+              <span class="stat-change stat-change-positive">+8.3%</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon stat-icon-warning">📦</div>
+            <div class="stat-content">
+              <h3 class="stat-label">Orders</h3>
+              <p class="stat-value">1,892</p>
+              <span class="stat-change stat-change-negative">-3.2%</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon stat-icon-info">⭐</div>
+            <div class="stat-content">
+              <h3 class="stat-label">Satisfaction</h3>
+              <p class="stat-value">98.4%</p>
+              <span class="stat-change stat-change-positive">+2.1%</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- Grid de gráficos -->
+        <section class="charts-grid">
+          <div class="chart-container chart-large">
+            <div class="chart-header">
+              <h3>Sales Overview</h3>
+              <select class="chart-filter">
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+                <option>Last 3 months</option>
+              </select>
+            </div>
+            <div class="chart-placeholder">
+              <div class="chart-bars">
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 45%"></div>
+                <div class="bar" style="height: 90%"></div>
+                <div class="bar" style="height: 70%"></div>
+                <div class="bar" style="height: 85%"></div>
+                <div class="bar" style="height: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-container chart-medium">
+            <div class="chart-header">
+              <h3>Traffic Sources</h3>
+            </div>
+            <div class="chart-placeholder">
+              <div class="donut-chart">
+                <div class="donut-center">
+                  <div class="donut-value">65%</div>
+                  <div class="donut-label">Direct</div>
+                </div>
+              </div>
+              <ul class="chart-legend">
+                <li><span class="legend-color" style="background: #667eea"></span> Direct (65%)</li>
+                <li><span class="legend-color" style="background: #764ba2"></span> Organic (25%)</li>
+                <li><span class="legend-color" style="background: #f093fb"></span> Referral (10%)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="chart-container chart-medium">
+            <div class="chart-header">
+              <h3>Recent Activity</h3>
+            </div>
+            <ul class="activity-list">
+              <li class="activity-item">
+                <span class="activity-icon">🆕</span>
+                <div class="activity-content">
+                  <strong>New user registered</strong>
+                  <span class="activity-time">2 minutes ago</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <span class="activity-icon">💳</span>
+                <div class="activity-content">
+                  <strong>Payment received</strong>
+                  <span class="activity-time">15 minutes ago</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <span class="activity-icon">📧</span>
+                <div class="activity-content">
+                  <strong>Email campaign sent</strong>
+                  <span class="activity-time">1 hour ago</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <span class="activity-icon">🎯</span>
+                <div class="activity-content">
+                  <strong>Goal completed</strong>
+                  <span class="activity-time">3 hours ago</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Tabela responsiva -->
+        <section class="data-table-container">
+          <div class="table-header">
+            <h3>Recent Transactions</h3>
+            <button class="btn-primary">Export</button>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Customer</th>
+                  <th>Product</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="ID">#12345</td>
+                  <td data-label="Customer">Maria Santos</td>
+                  <td data-label="Product">Premium Plan</td>
+                  <td data-label="Amount">$99.00</td>
+                  <td data-label="Status"><span class="badge badge-success">Completed</span></td>
+                  <td data-label="Date">2025-10-19</td>
+                  <td data-label="Actions"><button class="btn-sm">View</button></td>
+                </tr>
+                <tr>
+                  <td data-label="ID">#12344</td>
+                  <td data-label="Customer">Pedro Oliveira</td>
+                  <td data-label="Product">Basic Plan</td>
+                  <td data-label="Amount">$29.00</td>
+                  <td data-label="Status"><span class="badge badge-warning">Pending</span></td>
+                  <td data-label="Date">2025-10-19</td>
+                  <td data-label="Actions"><button class="btn-sm">View</button></td>
+                </tr>
+                <tr>
+                  <td data-label="ID">#12343</td>
+                  <td data-label="Customer">Ana Costa</td>
+                  <td data-label="Product">Enterprise</td>
+                  <td data-label="Amount">$299.00</td>
+                  <td data-label="Status"><span class="badge badge-success">Completed</span></td>
+                  <td data-label="Date">2025-10-18</td>
+                  <td data-label="Actions"><button class="btn-sm">View</button></td>
+                </tr>
+                <tr>
+                  <td data-label="ID">#12342</td>
+                  <td data-label="Customer">Carlos Lima</td>
+                  <td data-label="Product">Premium Plan</td>
+                  <td data-label="Amount">$99.00</td>
+                  <td data-label="Status"><span class="badge badge-success">Completed</span></td>
+                  <td data-label="Date">2025-10-18</td>
+                  <td data-label="Actions"><button class="btn-sm">View</button></td>
+                </tr>
+                <tr>
+                  <td data-label="ID">#12341</td>
+                  <td data-label="Customer">Julia Mendes</td>
+                  <td data-label="Product">Basic Plan</td>
+                  <td data-label="Amount">$29.00</td>
+                  <td data-label="Status"><span class="badge badge-success">Completed</span></td>
+                  <td data-label="Date">2025-10-17</td>
+                  <td data-label="Actions"><button class="btn-sm">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Media Query Info Panel -->
+        <section class="mq-info-panel">
+          <h3>🔍 Media Query Status</h3>
+          <div class="mq-status-grid">
+            <div class="mq-status-item">
+              <strong>Breakpoint:</strong>
+              <span id="current-breakpoint">Loading...</span>
+            </div>
+            <div class="mq-status-item">
+              <strong>Viewport:</strong>
+              <span id="viewport-size">Loading...</span>
+            </div>
+            <div class="mq-status-item">
+              <strong>Orientation:</strong>
+              <span id="orientation">Loading...</span>
+            </div>
+            <div class="mq-status-item">
+              <strong>Theme:</strong>
+              <span id="color-scheme">Loading...</span>
+            </div>
+            <div class="mq-status-item">
+              <strong>Hover Support:</strong>
+              <span id="hover-support">Loading...</span>
+            </div>
+            <div class="mq-status-item">
+              <strong>Pointer Type:</strong>
+              <span id="pointer-type">Loading...</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Toast notifications container -->
+    <div class="toast-container" id="toastContainer"></div>
+  </body>
+</html>
