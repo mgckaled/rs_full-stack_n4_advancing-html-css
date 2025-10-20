@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Projetos: Avançando no HTML e CSS - Formação Full Stack</title>
+    <title>Projetos: Avançando no HTML e CSS - Formação Full Stack</title>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -17,6 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Mini script inline só para tema -->
+    <script>
+      const theme = localStorage.getItem("theme") || "dark"
+      document.documentElement.setAttribute("data-theme", theme)
+    </script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="./src/styles/index.css" />
@@ -247,7 +253,10 @@
             <h3 class="project-title">Media Queries - Uso Avançado</h3>
             <p class="project-description">Demonstração de recursos nativos do HTML5 para formulários em produção</p>
             <div class="project-actions">
-              <button class="btn btn-primary" onclick="openPreview('./m4/b1/e2/index.html', 'Media Queries - Uso Avançado')">
+              <button
+                class="btn btn-primary"
+                onclick="openPreview('./m4/b1/e2/index.html', 'Media Queries - Uso Avançado')"
+              >
                 <i data-lucide="maximize-2"></i> Preview
               </button>
               <a href="./m4/b1/e2/index.html" target="_blank" class="btn btn-secondary">
@@ -269,7 +278,6 @@
               </a>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -283,7 +291,7 @@
           <div class="project-card">
             <span class="project-number">Projeto 5.1</span>
             <h3 class="project-title">LP de Patins Animada</h3>
-            <p class="project-description">Site responsivo e animado de produto fictício. </p>
+            <p class="project-description">Site responsivo e animado de produto fictício.</p>
             <div class="project-actions">
               <button class="btn btn-primary" onclick="openPreview('./m5/b2/index.html', 'LP de Patins Animada')">
                 <i data-lucide="maximize-2"></i> Preview
@@ -316,7 +324,6 @@
               </a>
             </div>
           </div>
-
         </div>
       </section>
 

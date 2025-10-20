@@ -1,34 +1,43 @@
 /* Variáveis de Tema */
-:root {
-    --bg-primary: #FFFFFF;
-    --bg-secondary: #F8FAFC;
-    --text-primary: #1E293B;
-    --text-secondary: #64748B;
-    --accent: #2563EB;
-    --accent-hover: #1D4ED8;
-    --border: #E2E8F0;
-    --shadow: rgba(37, 99, 235, 0.1);
-    --card-bg: #FFFFFF;
-    --overlay: rgba(0, 0, 0, 0.6);
-    --css-color-1: #2563EB;
-    --css-color-2: #1D4ED8;
-    --css-color-3: #3B82F6;
-    --grid-color: rgba(37, 99, 235, 0.08);
+
+/* Define dark como padrão para evitar flash branco */
+html {
+  background: #0f172a;
+  color: #f1f5f9;
 }
 
-[data-theme="dark"] {
-    --bg-primary: #0F172A;
-    --bg-secondary: #1E293B;
-    --text-primary: #F1F5F9;
-    --text-secondary: #94A3B8;
-    --accent: #60A5FA;
-    --accent-hover: #3B82F6;
-    --border: #334155;
-    --shadow: rgba(96, 165, 250, 0.2);
-    --card-bg: #1E293B;
-    --overlay: rgba(0, 0, 0, 0.85);
-    --css-color-1: #60A5FA;
-    --css-color-2: #3B82F6;
-    --css-color-3: #93C5FD;
-    --grid-color: rgba(96, 165, 250, 0.1);
+/* Dark theme como padrão */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent: #60a5fa;
+  --accent-hover: #3b82f6;
+  --border: #334155;
+  --shadow: rgba(96, 165, 250, 0.2);
+  --card-bg: #1e293b;
+  --overlay: rgba(0, 0, 0, 0.85);
+  --css-color-1: #60a5fa;
+  --css-color-2: #3b82f6;
+  --css-color-3: #93c5fd;
+  --grid-color: rgba(96, 165, 250, 0.1);
+}
+
+/* Light theme sobrescreve quando necessário */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border: #e2e8f0;
+  --shadow: rgba(37, 99, 235, 0.1);
+  --card-bg: #ffffff;
+  --overlay: rgba(0, 0, 0, 0.6);
+  --css-color-1: #2563eb;
+  --css-color-2: #1d4ed8;
+  --css-color-3: #3b82f6;
+  --grid-color: rgba(37, 99, 235, 0.08);
 }

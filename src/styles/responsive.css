@@ -1,176 +1,177 @@
 /* Media Queries - Responsividade */
 
 @media (max-width: 768px) {
-    /* Typography */
-    h1 {
-        font-size: 2rem;
-    }
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+  }
 
-    /* Layout */
-    .container {
-        padding: 1.5rem 1rem;
-    }
+  /* Layout */
+  .container {
+    padding: 1.5rem 1rem;
+  }
 
-    header {
-        padding: 2rem 0 1.5rem;
-    }
+  header {
+    padding: 2rem 0 1.5rem;
+  }
 
-    .module-section {
-        margin-bottom: 3rem;
-    }
+  .module-section {
+    margin-bottom: 3rem;
+  }
 
-    /* Grid */
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  /* Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
-    /* Theme Toggle */
-    .theme-toggle {
-        top: 1rem;
-        right: 1rem;
-        width: 44px;
-        height: 44px;
-    }
+  /* Theme Toggle */
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
 
-    /* Cards com animação de tap nativa */
-    .project-card {
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+  /* Cards com animação de tap nativa */
+  .project-card {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-    .project-card:active {
-        transform: scale(0.98);
-        opacity: 0.9;
-    }
+  .project-card:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
 
-    /* Botões com feedback tátil visual */
-    .btn {
-        transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+  /* Botões com feedback tátil visual */
+  .btn {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-    .btn:active {
-        transform: scale(0.96);
-    }
+  .btn:active {
+    transform: scale(0.96);
+  }
 
-    .btn-primary:active {
-        transform: scale(0.96) translateY(0);
-    }
+  .btn-primary:active {
+    transform: scale(0.96) translateY(0);
+  }
 
-    /* Modal - Estilo Bottom Sheet (Android/iOS) */
-    .modal {
-        padding: 0;
-        align-items: flex-end;
-    }
+  /* Modal - Estilo Bottom Sheet (Android/iOS) */
+  .modal {
+    padding: 0;
+    align-items: flex-end;
+  }
 
-    .modal.active {
-        animation: modalFadeInMobile 0.25s ease;
-    }
+  .modal.active {
+    animation: modalFadeInMobile 0.25s ease;
+  }
 
-    @keyframes modalFadeInMobile {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+  @keyframes modalFadeInMobile {
+    from {
+      opacity: 0;
     }
+    to {
+      opacity: 1;
+    }
+  }
 
-    .modal-content {
-        height: 90vh;
-        max-height: 90vh;
-        border-radius: 20px 20px 0 0;
-        transform: translateY(100%);
-        animation: slideUpFromBottom 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
-    }
+  .modal-content {
+    height: 90vh;
+    max-height: 90vh;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+    animation: slideUpFromBottom 0.35s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+  }
 
-    @keyframes slideUpFromBottom {
-        0% {
-            transform: translateY(100%);
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
+  @keyframes slideUpFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
     }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
-    /* Handle de arrasto (iOS/Android style) */
-    .modal-header::before {
-        content: '';
-        position: absolute;
-        top: 8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 36px;
-        height: 4px;
-        background: var(--border);
-        border-radius: 2px;
-    }
+  /* Handle de arrasto (iOS/Android style) */
+  .modal-header::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+  }
 
-    .modal-header {
-        padding: 1.5rem 1rem 1rem;
-        position: relative;
-    }
+  .modal-header {
+    padding: 1.5rem 1rem 1rem;
+    position: relative;
+  }
 
-    .modal-footer {
-        padding: 1rem;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
+  .modal-footer {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-    .modal-footer .btn {
-        width: 100%;
-    }
+  .modal-footer .btn {
+    width: 100%;
+  }
 
-    /* Scroll suave nativo */
-    .container {
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-    }
+  /* Scroll suave nativo */
+  .container {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
 
-    /* Remove hover effects no mobile */
-    .project-card:hover {
-        transform: none;
-    }
+  /* Remove hover effects no mobile */
+  .project-card:hover {
+    transform: none;
+  }
 
-    .btn:hover {
-        transform: none;
-    }
+  .btn:hover {
+    transform: none;
+  }
 
-    .btn-primary:hover {
-        transform: none;
-    }
+  .btn-primary:hover {
+    transform: none;
+  }
 
-    /* Otimizações de toque */
-    * {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-    }
+  /* Otimizações de toque */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
 
-    button, a {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-    }
+  button,
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (max-width: 480px) {
-    /* Modal ainda mais nativo em telas pequenas */
-    .modal-content {
-        height: 92vh;
-        max-height: 92vh;
-    }
+  /* Modal ainda mais nativo em telas pequenas */
+  .modal-content {
+    height: 92vh;
+    max-height: 92vh;
+  }
 
-    .modal-title {
-        font-size: 1rem;
-    }
+  .modal-title {
+    font-size: 1rem;
+  }
 
-    /* Cards mais compactos */
-    .project-card {
-        padding: 1.25rem;
-    }
+  /* Cards mais compactos */
+  .project-card {
+    padding: 1.25rem;
+  }
 
-    /* Botões com touch target maior */
-    .btn {
-        padding: 0.65rem 1rem;
-        min-height: 44px;
-    }
+  /* Botões com touch target maior */
+  .btn {
+    padding: 0.65rem 1rem;
+    min-height: 44px;
+  }
 }
