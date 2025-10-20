@@ -26,6 +26,12 @@
 
 Repositório pessoal de registro, referência e suporte para fins de aprendizado, consulta e acompanhamento do curso de **Avançando no HTML e CSS** (Nível 4), da formação **Full-Stack**, desenvolvido pela Faculdade de Tecnologia Rocketseat (FTR).
 
+**Página Web com todos os projetos reunidos**: [Projetos: Avançando no HTML e CSS](https://mgckaled.github.io/rs_full-stack_n4_advancing-html-css/)
+
+<p align="center">
+  <img alt="Preview Main Page" src="./.github/assets/images/preview_main_page.png" width="70%" />
+</p>
+
 ---
 
 ## Módulo 1 - Layout com CSS
