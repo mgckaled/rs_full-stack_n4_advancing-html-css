@@ -24,14 +24,23 @@
   border-color: var(--accent);
 }
 
-.theme-toggle i[data-lucide] {
+.theme-toggle svg {
   width: 20px;
   height: 20px;
   transition: transform 0.5s ease;
 }
 
-.theme-toggle:hover i[data-lucide] {
+.theme-toggle:hover svg {
   transform: rotate(180deg);
+}
+
+/* Cores específicas dos ícones de tema */
+[data-theme="light"] .theme-toggle svg {
+  color: #64748b; /* Cinza para lua */
+}
+
+[data-theme="dark"] .theme-toggle svg {
+  color: #fcd34d; /* Amarelo para sol */
 }
 
 /* Project Cards */
@@ -112,7 +121,7 @@
 }
 
 /* Lucide Icons Animation - Importante: sem margin/padding que possa deslocar */
-.btn svg[data-lucide] {
+.btn svg {
   width: 16px !important;
   height: 16px !important;
   display: block !important;
@@ -120,11 +129,11 @@
   transition: transform 0.3s ease !important;
 }
 
-.btn-primary:hover svg[data-lucide] {
+.btn-primary:hover svg {
   transform: rotate(90deg) !important;
 }
 
-.btn-secondary:hover svg[data-lucide] {
+.btn-secondary:hover svg {
   color: var(--accent);
   transform: translateX(3px) !important;
 }

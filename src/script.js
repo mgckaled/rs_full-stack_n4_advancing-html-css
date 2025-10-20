@@ -1,11 +1,10 @@
 // Theme Toggle
 const themeToggle = document.getElementById("themeToggle")
-const themeIcon = themeToggle.querySelector("i[data-lucide]")
 const html = document.documentElement
 
-const savedTheme = localStorage.getItem("theme") || "light"
+const savedTheme = localStorage.getItem("theme") || "dark"
 html.setAttribute("data-theme", savedTheme)
-updateIcon(savedTheme)
+updateThemeIcon(savedTheme)
 
 themeToggle.addEventListener("click", () => {
   const currentTheme = html.getAttribute("data-theme")
@@ -13,19 +12,19 @@ themeToggle.addEventListener("click", () => {
 
   html.setAttribute("data-theme", newTheme)
   localStorage.setItem("theme", newTheme)
-  updateIcon(newTheme)
+  updateThemeIcon(newTheme)
 })
 
-function updateIcon(theme) {
-  // Remove o ícone anterior
-  themeIcon.removeAttribute("data-lucide")
+function updateThemeIcon(theme) {
+  // Limpa o conteúdo do botão
+  themeToggle.innerHTML = ""
 
-  // Adiciona o novo ícone
-  if (theme === "light") {
-    themeIcon.setAttribute("data-lucide", "moon")
-  } else {
-    themeIcon.setAttribute("data-lucide", "sun")
-  }
+  // Cria o elemento i com o ícone correto
+  const icon = document.createElement("i")
+  icon.setAttribute("data-lucide", theme === "light" ? "moon" : "sun")
+
+  // Adiciona ao botão
+  themeToggle.appendChild(icon)
 
   // Re-renderiza os ícones Lucide
   lucide.createIcons()
