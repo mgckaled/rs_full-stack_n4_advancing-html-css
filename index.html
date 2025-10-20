@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Projetos | Full Stack</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='70' font-size='60' font-weight='700' font-family='monospace' text-anchor='middle' fill='white'>{}</text></svg>"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/styles/index.css" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Scripts -->
+    <script src="./src/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Background Animations -->
+    <div class="bg-animation">
+      <div class="code-grid"></div>
+      <div class="floating-code">{ display: flex; }</div>
+      <div class="floating-code">.container { }</div>
+      <div class="floating-code">@keyframes slide</div>
+      <div class="floating-code">grid-template</div>
+      <div class="floating-code">:hover { }</div>
+      <div class="floating-code">border-radius:</div>
+      <div class="floating-code">position: absolute;</div>
+      <div class="floating-code">transform: rotate()</div>
+      <div class="floating-code">::before</div>
+      <div class="floating-code">justify-content:</div>
+      <div class="floating-code">@media (max-width)</div>
+      <div class="floating-code">box-shadow:</div>
+      <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <i data-lucide="moon"></i>
+    </button>
+
+    <div class="container">
+      <header>
+        <h1>Projetos práticos: Avançando no HTML e CSS</h1>
+        <p class="subtitle">Projetos e Desafios no Nível 4 da Formação Full-Stack Rocketseat</p>
+      </header>
+
+      <!-- Módulo 1 -->
+      <section class="module-section">
+        <div class="module-header">
+          <h2 class="module-title">Módulo 1 - Layout com CSS</h2>
+          <p class="module-description">
+            Criação de layouts avançados para páginas web usando Flexbox e Grid, explorando técnicas de posicionamento,
+            variáveis e pseudo-elementos
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-number">Projeto 1.1</span>
+            <h3 class="project-title">Portfólio: DevStudio</h3>
+            <p class="project-description">Landing page de portifólio com design moderno e responsivo</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m1/b1/src/index.html', 'Portfólio: DevStudio')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m1/b1/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">Projeto 1.2</span>
+            <h3 class="project-title">Sales Dashboard</h3>
+            <p class="project-description">Interface de dashboard de vendas com cards e gráficos</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m1/b2/src/index.html', 'Sales Dashboard')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m1/b2/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">Projeto 1.3</span>
+            <h3 class="project-title">Travelgran</h3>
+            <p class="project-description">Blog de viagens com grid e tipografia avançada</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m1/b3/src/index.html', 'Travelgran')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m1/b3/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">Projeto 1.4</span>
+            <h3 class="project-title">Dashboard Analytics</h3>
+            <p class="project-description">Interface de dashboard com grids avançados e gráficos</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m1/b4/src/index.html', 'Dashboard Analytics')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m1/b4/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">Projeto 1.5</span>
+            <h3 class="project-title">Portal de Notícias</h3>
+            <p class="project-description">Landing Page de Notícias</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m1/b5/src/index.html', 'Portal de Notícias')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m1/b5/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Módulo 2 -->
+      <section class="module-section">
+        <div class="module-header">
+          <h2 class="module-title">Módulo 2 - Formulários HTML</h2>
+          <p>
+            Desenvolvimento de formulários com elementos como input text, select, textarea, utilizando botões,
+            checkboxes e outros recursos.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-number">Projeto 2.1</span>
+            <h3 class="project-title">Formulários HTML5</h3>
+            <p class="project-description">Demonstração de recursos nativos do HTML5 para formulários em produção</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m2/b1/src/index.html', 'Formulários HTML5')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m2/b1/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">Projeto 2.2</span>
+            <h3 class="project-title">Formulário de Matrícula</h3>
+            <p class="project-description">
+              Projeto de formulário de matrícula customizado, com múltiplas funcionalidades
+            </p>
+            <div class="project-actions">
+              <button
+                class="btn btn-primary"
+                onclick="openPreview('./m2/b2/src/index.html', 'Formulário de Matrícula')"
+              >
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m2/b2/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Módulo 3 -->
+      <section class="module-section">
+        <div class="module-header">
+          <h2 class="module-title">Módulo 3 - CSS Functions</h2>
+          <p class="module-description">
+            Técnicas para girar, mover, escalar e desenhar elementos, trabalhar com cores e muito mais.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-number">Projeto 3.1</span>
+            <h3 class="project-title">CSS Functions Gallery</h3>
+            <p class="project-description">Galeria demonstrando o poder das funções CSS modernas</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m3/src/index.html', 'CSS Functions Gallery')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m3/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Módulo 4 -->
+      <section class="module-section">
+        <div class="module-header">
+          <h2 class="module-title">Módulo 4 - Responsividade (CSS Media Queries)</h2>
+          <p class="module-description">
+            Usando Media Queries para ajustar estilos de acordo com as características do dispositivo, garantindo uma
+            experiência consistente e responsiva em diversas resoluções de tela.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-number">Projeto 4.1</span>
+            <h3 class="project-title">Media Queries - Uso Básico</h3>
+            <p class="project-description">Biblioteca de componentes reutilizáveis</p>
+            <div class="project-actions">
+              <button
+                class="btn btn-primary"
+                onclick="openPreview('./m4/b1/e1/index.html', 'Uso Básico - Media Queries')"
+              >
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m4/b1/e1/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">Projeto 4.2</span>
+            <h3 class="project-title">Formulários HTML5</h3>
+            <p class="project-description">Demonstração de recursos nativos do HTML5 para formulários em produção</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m4/b1/e2/index.html', 'Formulários HTML5')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m4/b1/e2/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Módulo 5 -->
+      <section class="module-section">
+        <div class="module-header">
+          <h2 class="module-title">Módulo 5 - Projeto Final</h2>
+          <p class="module-description">Aplicação completa integrando todos os conceitos</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-number">Projeto 5.1</span>
+            <h3 class="project-title">E-commerce Platform</h3>
+            <p class="project-description">Plataforma de e-commerce completa</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./m5/final/src/index.html', 'E-commerce Platform')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./m5/final/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Desafios -->
+      <section class="module-section">
+        <div class="module-header">
+          <h2 class="module-title">Desafios Extra</h2>
+          <p class="module-description">Projetos desafiadores para praticar</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span class="project-number">Desafio 1</span>
+            <h3 class="project-title">Pomodoro Timer</h3>
+            <p class="project-description">Timer com técnica Pomodoro</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./desafios/d1/src/index.html', 'Pomodoro Timer')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./desafios/d1/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <span class="project-number">Desafio 2</span>
+            <h3 class="project-title">Memory Game</h3>
+            <p class="project-description">Jogo da memória interativo</p>
+            <div class="project-actions">
+              <button class="btn btn-primary" onclick="openPreview('./desafios/d2/src/index.html', 'Memory Game')">
+                <i data-lucide="maximize-2"></i> Preview
+              </button>
+              <a href="./desafios/d2/src/index.html" target="_blank" class="btn btn-secondary">
+                <i data-lucide="external-link"></i> Nova Aba
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          Desenvolvido durante a Formação Full-Stack da
+          <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a>
+        </p>
+        <p>
+          Código disponível no
+          <a href="https://github.com/mgckaled/rs_full-stack_n4_advancing-html-css" target="_blank">GitHub</a>
+        </p>
+      </footer>
+    </div>
+
+    <!-- Modal Preview -->
+    <div class="modal" id="previewModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle">Preview do Projeto</h3>
+          <button class="modal-close" onclick="closePreview()">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="iframe-container">
+            <iframe id="previewFrame" src="" title="Preview do projeto"></iframe>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="closePreview()">Fechar</button>
+          <a id="openNewTab" href="" target="_blank" class="btn btn-primary">Abrir em Nova Aba</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

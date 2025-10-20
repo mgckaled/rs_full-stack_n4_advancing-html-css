@@ -1,0 +1,46 @@
+/* Media Queries - Responsividade */
+
+@media (max-width: 768px) {
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Layout */
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  header {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .module-section {
+    margin-bottom: 3rem;
+  }
+
+  /* Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Theme Toggle */
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Modal */
+  .modal {
+    padding: 0;
+  }
+
+  .modal-content {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+}
