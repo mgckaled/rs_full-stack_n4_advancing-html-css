@@ -1,4 +1,4 @@
-/* Animações de Fundo */
+/* Animações de Fundo - Otimizado */
 
 /* Container de Animações */
 .bg-animation {
@@ -24,6 +24,7 @@
   background-size: 50px 50px;
   opacity: 0.7;
   animation: gridMove 20s linear infinite;
+  will-change: transform;
 }
 
 @keyframes gridMove {
@@ -35,7 +36,7 @@
   }
 }
 
-/* Código Flutuante */
+/* Código Flutuante - Reduzido para 6 elementos */
 .floating-code {
   position: absolute;
   font-family: "JetBrains Mono", monospace;
@@ -43,6 +44,7 @@
   opacity: 0;
   animation: float 15s ease-in-out infinite;
   font-weight: 700;
+  will-change: transform, opacity;
 }
 
 @keyframes float {
@@ -63,79 +65,43 @@
 }
 
 .floating-code:nth-child(1) {
-  top: 8%;
-  left: 8%;
+  top: 10%;
+  left: 10%;
   color: var(--css-color-1);
   animation-delay: 0s;
 }
 .floating-code:nth-child(2) {
-  top: 15%;
-  right: 12%;
+  top: 25%;
+  right: 15%;
   color: var(--css-color-2);
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
 }
 .floating-code:nth-child(3) {
-  top: 25%;
-  left: 15%;
+  top: 45%;
+  left: 8%;
   color: var(--css-color-3);
-  animation-delay: 3s;
+  animation-delay: 5s;
 }
 .floating-code:nth-child(4) {
-  top: 35%;
-  right: 8%;
+  top: 60%;
+  right: 12%;
   color: var(--css-color-1);
-  animation-delay: 4.5s;
-}
-.floating-code:nth-child(5) {
-  top: 45%;
-  left: 5%;
-  color: var(--css-color-2);
-  animation-delay: 6s;
-}
-.floating-code:nth-child(6) {
-  top: 55%;
-  right: 18%;
-  color: var(--css-color-3);
   animation-delay: 7.5s;
 }
-.floating-code:nth-child(7) {
-  top: 65%;
-  left: 12%;
-  color: var(--css-color-1);
-  animation-delay: 9s;
-}
-.floating-code:nth-child(8) {
-  top: 70%;
-  right: 6%;
-  color: var(--css-color-2);
-  animation-delay: 10.5s;
-}
-.floating-code:nth-child(9) {
-  top: 78%;
-  left: 22%;
-  color: var(--css-color-3);
-  animation-delay: 12s;
-}
-.floating-code:nth-child(10) {
-  top: 82%;
-  right: 20%;
-  color: var(--css-color-1);
-  animation-delay: 13.5s;
-}
-.floating-code:nth-child(11) {
-  top: 88%;
+.floating-code:nth-child(5) {
+  top: 75%;
   left: 18%;
   color: var(--css-color-2);
-  animation-delay: 15s;
+  animation-delay: 10s;
 }
-.floating-code:nth-child(12) {
-  top: 92%;
-  right: 14%;
+.floating-code:nth-child(6) {
+  top: 88%;
+  right: 20%;
   color: var(--css-color-3);
-  animation-delay: 16.5s;
+  animation-delay: 12.5s;
 }
 
-/* Partículas */
+/* Partículas - Reduzido para 4 elementos */
 .particles {
   position: absolute;
   width: 100%;
@@ -151,6 +117,7 @@
   opacity: 0;
   animation: particleFloat 8s ease-in-out infinite;
   box-shadow: 0 0 8px var(--css-color-2);
+  will-change: transform, opacity;
 }
 
 @keyframes particleFloat {
@@ -169,38 +136,35 @@
 }
 
 .particle:nth-child(1) {
-  left: 10%;
+  left: 15%;
   animation-delay: 0s;
   background: var(--css-color-1);
   box-shadow: 0 0 8px var(--css-color-1);
 }
 .particle:nth-child(2) {
-  left: 25%;
-  animation-delay: 1.5s;
+  left: 35%;
+  animation-delay: 2s;
   background: var(--css-color-3);
   box-shadow: 0 0 8px var(--css-color-3);
 }
 .particle:nth-child(3) {
-  left: 40%;
-  animation-delay: 3s;
+  left: 60%;
+  animation-delay: 4s;
   background: var(--css-color-2);
   box-shadow: 0 0 8px var(--css-color-2);
 }
 .particle:nth-child(4) {
-  left: 55%;
-  animation-delay: 4.5s;
+  left: 80%;
+  animation-delay: 6s;
   background: var(--css-color-1);
   box-shadow: 0 0 8px var(--css-color-1);
 }
-.particle:nth-child(5) {
-  left: 70%;
-  animation-delay: 6s;
-  background: var(--css-color-3);
-  box-shadow: 0 0 8px var(--css-color-3);
-}
-.particle:nth-child(6) {
-  left: 85%;
-  animation-delay: 7.5s;
-  background: var(--css-color-2);
-  box-shadow: 0 0 8px var(--css-color-2);
+
+/* Desabilitar animações em dispositivos com preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .code-grid,
+  .floating-code,
+  .particle {
+    animation: none;
+  }
 }
